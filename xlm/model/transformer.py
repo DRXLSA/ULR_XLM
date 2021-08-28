@@ -249,7 +249,9 @@ class ULR(nn.Module):
         self.softmax = nn.Softmax(dim=1)
 
 
+
     def forward(self,x,pad_mask):
+
         bs,slen,dim = x.shape
         #ulr_x = x.clone().fill_(0).reshape(-1,x.shape[2]) #(bs*seq,emb_dim)
         x_reshape = x.reshape(bs*slen,dim)
@@ -259,6 +261,7 @@ class ULR(nn.Module):
         x_real = x_reshape[pad_mask_flat==True]
         query = x_real #(_,emb_dim)
         D = torch.matmul(self.A(query),self.embeddings.weight.transpose(0,1)) / self.temp #(query_num,words_num)
+
 
 
         q = self.softmax(D)
@@ -278,7 +281,6 @@ class ULR(nn.Module):
 
         
         Eu = torch.matmul(q,self.embeddings.weight) #(query_num,emb_dim)
-
 
         ulr_x[pad_mask_flat] = Eu
 
@@ -457,7 +459,9 @@ class TransformerModel(nn.Module):
         # embeddings
         #if encode_tensor is None:
 
+
         tensor = self.embeddings(x).detach()
+
 
         
         tensor = self.ulr(tensor,mask)
@@ -506,7 +510,9 @@ class TransformerModel(nn.Module):
         # move back sequence length to dimension 0
         tensor = tensor.transpose(0, 1)
         
+
         return tensor
+
     def predict(self, tensor, pred_mask, y, get_scores):
         """
         Given the last hidden state, compute word scores and/or the loss.

@@ -146,11 +146,12 @@ def build_model(params, dico):
             model.load_state_dict(reloaded)
 
 
+
             if 'embeddings.weight' in reloaded.keys():
                 model.embeddings.weight.requires_grad = False
 
 
-          
+           
 
         logger.info("Model: {}".format(model))
         logger.info("Number of parameters (model): %i" % sum([p.numel() for p in model.parameters() if p.requires_grad]))
