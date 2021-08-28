@@ -1,0 +1,1172 @@
+nohup: ignoring input
+FAISS library was not found.
+FAISS not available. Switching to standard nearest neighbors search implementation.
+FAISS library was not found.
+FAISS not available. Switching to standard nearest neighbors search implementation.
+SLURM job: False
+3 - Number of nodes: 1
+3 - Node ID        : 0
+3 - Local rank     : 3
+3 - Global rank    : 3
+3 - World size     : 4
+3 - GPUs per node  : 4
+3 - Master         : False
+3 - Multi-node     : False
+3 - Multi-GPU      : True
+3 - Hostname       : ubuntu
+SLURM job: False
+1 - Number of nodes: 1
+1 - Node ID        : 0
+1 - Local rank     : 1
+1 - Global rank    : 1
+1 - World size     : 4
+1 - GPUs per node  : 4
+1 - Master         : False
+1 - Multi-node     : False
+1 - Multi-GPU      : True
+1 - Hostname       : ubuntu
+FAISS library was not found.
+FAISS not available. Switching to standard nearest neighbors search implementation.
+FAISS library was not found.
+FAISS not available. Switching to standard nearest neighbors search implementation.
+SLURM job: False
+2 - Number of nodes: 1
+2 - Node ID        : 0
+2 - Local rank     : 2
+2 - Global rank    : 2
+2 - World size     : 4
+2 - GPUs per node  : 4
+2 - Master         : False
+2 - Multi-node     : False
+2 - Multi-GPU      : True
+2 - Hostname       : ubuntu
+SLURM job: False
+0 - Number of nodes: 1
+0 - Node ID        : 0
+0 - Local rank     : 0
+0 - Global rank    : 0
+0 - World size     : 4
+0 - GPUs per node  : 4
+0 - Master         : True
+0 - Multi-node     : False
+0 - Multi-GPU      : True
+0 - Hostname       : ubuntu
+Initializing PyTorch distributed ...
+Initializing PyTorch distributed ...
+Initializing PyTorch distributed ...
+Initializing PyTorch distributed ...
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Initialized logger ============
+INFO - 08/26/21 18:36:38 - 0:00:00 - accumulate_gradients: 1
+                                     ae_steps: ['en', 'zh']
+                                     amp: 1
+                                     asm: False
+                                     attention_dropout: 0.1
+                                     batch_size: 32
+                                     beam_size: 1
+                                     bptt: 64
+                                     bt_src_langs: ['en', 'zh']
+                                     bt_steps: [('en', 'zh', 'en'), ('zh', 'en', 'zh')]
+                                     clip_grad_norm: 5
+                                     clm_steps: []
+                                     command: python train.py --local_rank=3 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1 --exp_id "7g2zu8v2w0"
+                                     context_size: 0
+                                     data_path: ./data/processed/en-zh
+                                     debug: False
+                                     debug_slurm: False
+                                     debug_train: False
+                                     dropout: 0.1
+                                     dump_path: ./dumped_xlm/xlm_en_zh/7g2zu8v2w0
+                                     early_stopping: False
+                                     emb_dim: 1024
+                                     encode_model: 
+                                     encoder_only: False
+                                     epoch_size: 10000
+                                     eval_bleu: True
+                                     eval_only: False
+                                     exp_id: 7g2zu8v2w0
+                                     exp_name: xlm_en_zh
+                                     fp16: True
+                                     gelu_activation: True
+                                     global_rank: 3
+                                     group_by_size: True
+                                     id2lang: {0: 'en', 1: 'zh'}
+                                     is_master: False
+                                     is_slurm_job: False
+                                     lambda_ae: 0:1,100000:0.1,300000:0
+                                     lambda_bt: 1
+                                     lambda_clm: 1
+                                     lambda_mlm: 1
+                                     lambda_mt: 1
+                                     lambda_pc: 1
+                                     lang2id: {'en': 0, 'zh': 1}
+                                     langs: ['en', 'zh']
+                                     length_penalty: 1
+                                     lg_sampling_factor: -1
+                                     lgs: en-zh
+                                     local_rank: 3
+                                     master_port: -1
+                                     max_batch_size: 0
+                                     max_epoch: 20
+                                     max_len: 100
+                                     max_vocab: -1
+                                     min_count: 0
+                                     mlm_steps: []
+                                     mono_dataset: {'en': {'train': './data/processed/en-zh/train.en.pth', 'valid': './data/processed/en-zh/valid.en.pth', 'test': './data/processed/en-zh/test.en.pth'}, 'zh': {'train': './data/processed/en-zh/train.zh.pth', 'valid': './data/processed/en-zh/valid.zh.pth', 'test': './data/processed/en-zh/test.zh.pth'}}
+                                     mt_steps: []
+                                     multi_gpu: True
+                                     multi_node: False
+                                     n_gpu_per_node: 4
+                                     n_heads: 8
+                                     n_langs: 2
+                                     n_layers: 6
+                                     n_nodes: 1
+                                     node_id: 0
+                                     optimizer: adam,lr=0.0001
+                                     para_dataset: {('en', 'zh'): {'valid': ('./data/processed/en-zh/valid.en-zh.en.pth', './data/processed/en-zh/valid.en-zh.zh.pth'), 'test': ('./data/processed/en-zh/test.en-zh.en.pth', './data/processed/en-zh/test.en-zh.zh.pth')}}
+                                     pc_steps: []
+                                     reload_checkpoint: 
+                                     reload_emb: 
+                                     reload_model: /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth
+                                     sample_alpha: 0
+                                     save_periodic: 1
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     split_data: False
+                                     stopping_criterion: valid_en-zh_mt_bleu,10
+                                     temperature: 0.05
+                                     tokens_per_batch: 2000
+                                     ulr_words_num: 100000
+                                     use_encode_model: False
+                                     use_lang_emb: True
+                                     use_memory: False
+                                     validation_metrics: valid_en-zh_mt_bleu
+                                     word_blank: 0.1
+                                     word_dropout: 0.1
+                                     word_keep: 0.1
+                                     word_mask: 0.8
+                                     word_mask_keep_rand: 0.8,0.1,0.1
+                                     word_pred: 0.15
+                                     word_rand: 0.1
+                                     word_shuffle: 3.0
+                                     world_size: 4
+INFO - 08/26/21 18:36:38 - 0:00:00 - The experiment will be stored in ./dumped_xlm/xlm_en_zh/7g2zu8v2w0
+                                     
+INFO - 08/26/21 18:36:38 - 0:00:00 - Running command: python train.py --local_rank=3 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1
+
+WARNING - 08/26/21 18:36:38 - 0:00:00 - Signal handler installed.
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Monolingual data (en)
+INFO - 08/26/21 18:36:38 - 0:00:00 - Loading data from ./data/processed/en-zh/train.en.pth ...
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Initialized logger ============
+INFO - 08/26/21 18:36:38 - 0:00:00 - accumulate_gradients: 1
+                                     ae_steps: ['en', 'zh']
+                                     amp: 1
+                                     asm: False
+                                     attention_dropout: 0.1
+                                     batch_size: 32
+                                     beam_size: 1
+                                     bptt: 64
+                                     bt_src_langs: ['en', 'zh']
+                                     bt_steps: [('en', 'zh', 'en'), ('zh', 'en', 'zh')]
+                                     clip_grad_norm: 5
+                                     clm_steps: []
+                                     command: python train.py --local_rank=2 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1 --exp_id "g0tturz9ic"
+                                     context_size: 0
+                                     data_path: ./data/processed/en-zh
+                                     debug: False
+                                     debug_slurm: False
+                                     debug_train: False
+                                     dropout: 0.1
+                                     dump_path: ./dumped_xlm/xlm_en_zh/g0tturz9ic
+                                     early_stopping: False
+                                     emb_dim: 1024
+                                     encode_model: 
+                                     encoder_only: False
+                                     epoch_size: 10000
+                                     eval_bleu: True
+                                     eval_only: False
+                                     exp_id: g0tturz9ic
+                                     exp_name: xlm_en_zh
+                                     fp16: True
+                                     gelu_activation: True
+                                     global_rank: 2
+                                     group_by_size: True
+                                     id2lang: {0: 'en', 1: 'zh'}
+                                     is_master: False
+                                     is_slurm_job: False
+                                     lambda_ae: 0:1,100000:0.1,300000:0
+                                     lambda_bt: 1
+                                     lambda_clm: 1
+                                     lambda_mlm: 1
+                                     lambda_mt: 1
+                                     lambda_pc: 1
+                                     lang2id: {'en': 0, 'zh': 1}
+                                     langs: ['en', 'zh']
+                                     length_penalty: 1
+                                     lg_sampling_factor: -1
+                                     lgs: en-zh
+                                     local_rank: 2
+                                     master_port: -1
+                                     max_batch_size: 0
+                                     max_epoch: 20
+                                     max_len: 100
+                                     max_vocab: -1
+                                     min_count: 0
+                                     mlm_steps: []
+                                     mono_dataset: {'en': {'train': './data/processed/en-zh/train.en.pth', 'valid': './data/processed/en-zh/valid.en.pth', 'test': './data/processed/en-zh/test.en.pth'}, 'zh': {'train': './data/processed/en-zh/train.zh.pth', 'valid': './data/processed/en-zh/valid.zh.pth', 'test': './data/processed/en-zh/test.zh.pth'}}
+                                     mt_steps: []
+                                     multi_gpu: True
+                                     multi_node: False
+                                     n_gpu_per_node: 4
+                                     n_heads: 8
+                                     n_langs: 2
+                                     n_layers: 6
+                                     n_nodes: 1
+                                     node_id: 0
+                                     optimizer: adam,lr=0.0001
+                                     para_dataset: {('en', 'zh'): {'valid': ('./data/processed/en-zh/valid.en-zh.en.pth', './data/processed/en-zh/valid.en-zh.zh.pth'), 'test': ('./data/processed/en-zh/test.en-zh.en.pth', './data/processed/en-zh/test.en-zh.zh.pth')}}
+                                     pc_steps: []
+                                     reload_checkpoint: 
+                                     reload_emb: 
+                                     reload_model: /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth
+                                     sample_alpha: 0
+                                     save_periodic: 1
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     split_data: False
+                                     stopping_criterion: valid_en-zh_mt_bleu,10
+                                     temperature: 0.05
+                                     tokens_per_batch: 2000
+                                     ulr_words_num: 100000
+                                     use_encode_model: False
+                                     use_lang_emb: True
+                                     use_memory: False
+                                     validation_metrics: valid_en-zh_mt_bleu
+                                     word_blank: 0.1
+                                     word_dropout: 0.1
+                                     word_keep: 0.1
+                                     word_mask: 0.8
+                                     word_mask_keep_rand: 0.8,0.1,0.1
+                                     word_pred: 0.15
+                                     word_rand: 0.1
+                                     word_shuffle: 3.0
+                                     world_size: 4
+INFO - 08/26/21 18:36:38 - 0:00:00 - The experiment will be stored in ./dumped_xlm/xlm_en_zh/g0tturz9ic
+                                     
+INFO - 08/26/21 18:36:38 - 0:00:00 - Running command: python train.py --local_rank=2 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1
+
+WARNING - 08/26/21 18:36:38 - 0:00:00 - Signal handler installed.
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Monolingual data (en)
+INFO - 08/26/21 18:36:38 - 0:00:00 - Loading data from ./data/processed/en-zh/train.en.pth ...
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Initialized logger ============
+INFO - 08/26/21 18:36:38 - 0:00:00 - accumulate_gradients: 1
+                                     ae_steps: ['en', 'zh']
+                                     amp: 1
+                                     asm: False
+                                     attention_dropout: 0.1
+                                     batch_size: 32
+                                     beam_size: 1
+                                     bptt: 64
+                                     bt_src_langs: ['en', 'zh']
+                                     bt_steps: [('en', 'zh', 'en'), ('zh', 'en', 'zh')]
+                                     clip_grad_norm: 5
+                                     clm_steps: []
+                                     command: python train.py --local_rank=1 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1 --exp_id "22dboy0cab"
+                                     context_size: 0
+                                     data_path: ./data/processed/en-zh
+                                     debug: False
+                                     debug_slurm: False
+                                     debug_train: False
+                                     dropout: 0.1
+                                     dump_path: ./dumped_xlm/xlm_en_zh/22dboy0cab
+                                     early_stopping: False
+                                     emb_dim: 1024
+                                     encode_model: 
+                                     encoder_only: False
+                                     epoch_size: 10000
+                                     eval_bleu: True
+                                     eval_only: False
+                                     exp_id: 22dboy0cab
+                                     exp_name: xlm_en_zh
+                                     fp16: True
+                                     gelu_activation: True
+                                     global_rank: 1
+                                     group_by_size: True
+                                     id2lang: {0: 'en', 1: 'zh'}
+                                     is_master: False
+                                     is_slurm_job: False
+                                     lambda_ae: 0:1,100000:0.1,300000:0
+                                     lambda_bt: 1
+                                     lambda_clm: 1
+                                     lambda_mlm: 1
+                                     lambda_mt: 1
+                                     lambda_pc: 1
+                                     lang2id: {'en': 0, 'zh': 1}
+                                     langs: ['en', 'zh']
+                                     length_penalty: 1
+                                     lg_sampling_factor: -1
+                                     lgs: en-zh
+                                     local_rank: 1
+                                     master_port: -1
+                                     max_batch_size: 0
+                                     max_epoch: 20
+                                     max_len: 100
+                                     max_vocab: -1
+                                     min_count: 0
+                                     mlm_steps: []
+                                     mono_dataset: {'en': {'train': './data/processed/en-zh/train.en.pth', 'valid': './data/processed/en-zh/valid.en.pth', 'test': './data/processed/en-zh/test.en.pth'}, 'zh': {'train': './data/processed/en-zh/train.zh.pth', 'valid': './data/processed/en-zh/valid.zh.pth', 'test': './data/processed/en-zh/test.zh.pth'}}
+                                     mt_steps: []
+                                     multi_gpu: True
+                                     multi_node: False
+                                     n_gpu_per_node: 4
+                                     n_heads: 8
+                                     n_langs: 2
+                                     n_layers: 6
+                                     n_nodes: 1
+                                     node_id: 0
+                                     optimizer: adam,lr=0.0001
+                                     para_dataset: {('en', 'zh'): {'valid': ('./data/processed/en-zh/valid.en-zh.en.pth', './data/processed/en-zh/valid.en-zh.zh.pth'), 'test': ('./data/processed/en-zh/test.en-zh.en.pth', './data/processed/en-zh/test.en-zh.zh.pth')}}
+                                     pc_steps: []
+                                     reload_checkpoint: 
+                                     reload_emb: 
+                                     reload_model: /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth
+                                     sample_alpha: 0
+                                     save_periodic: 1
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     split_data: False
+                                     stopping_criterion: valid_en-zh_mt_bleu,10
+                                     temperature: 0.05
+                                     tokens_per_batch: 2000
+                                     ulr_words_num: 100000
+                                     use_encode_model: False
+                                     use_lang_emb: True
+                                     use_memory: False
+                                     validation_metrics: valid_en-zh_mt_bleu
+                                     word_blank: 0.1
+                                     word_dropout: 0.1
+                                     word_keep: 0.1
+                                     word_mask: 0.8
+                                     word_mask_keep_rand: 0.8,0.1,0.1
+                                     word_pred: 0.15
+                                     word_rand: 0.1
+                                     word_shuffle: 3.0
+                                     world_size: 4
+INFO - 08/26/21 18:36:38 - 0:00:00 - The experiment will be stored in ./dumped_xlm/xlm_en_zh/22dboy0cab
+                                     
+INFO - 08/26/21 18:36:38 - 0:00:00 - Running command: python train.py --local_rank=1 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1
+
+WARNING - 08/26/21 18:36:38 - 0:00:00 - Signal handler installed.
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Monolingual data (en)
+INFO - 08/26/21 18:36:38 - 0:00:00 - Loading data from ./data/processed/en-zh/train.en.pth ...
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Initialized logger ============
+INFO - 08/26/21 18:36:38 - 0:00:00 - accumulate_gradients: 1
+                                     ae_steps: ['en', 'zh']
+                                     amp: 1
+                                     asm: False
+                                     attention_dropout: 0.1
+                                     batch_size: 32
+                                     beam_size: 1
+                                     bptt: 64
+                                     bt_src_langs: ['en', 'zh']
+                                     bt_steps: [('en', 'zh', 'en'), ('zh', 'en', 'zh')]
+                                     clip_grad_norm: 5
+                                     clm_steps: []
+                                     command: python train.py --local_rank=0 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1 --exp_id "ii8spnlkm0"
+                                     context_size: 0
+                                     data_path: ./data/processed/en-zh
+                                     debug: False
+                                     debug_slurm: False
+                                     debug_train: False
+                                     dropout: 0.1
+                                     dump_path: ./dumped_xlm/xlm_en_zh/ii8spnlkm0
+                                     early_stopping: False
+                                     emb_dim: 1024
+                                     encode_model: 
+                                     encoder_only: False
+                                     epoch_size: 10000
+                                     eval_bleu: True
+                                     eval_only: False
+                                     exp_id: ii8spnlkm0
+                                     exp_name: xlm_en_zh
+                                     fp16: True
+                                     gelu_activation: True
+                                     global_rank: 0
+                                     group_by_size: True
+                                     id2lang: {0: 'en', 1: 'zh'}
+                                     is_master: True
+                                     is_slurm_job: False
+                                     lambda_ae: 0:1,100000:0.1,300000:0
+                                     lambda_bt: 1
+                                     lambda_clm: 1
+                                     lambda_mlm: 1
+                                     lambda_mt: 1
+                                     lambda_pc: 1
+                                     lang2id: {'en': 0, 'zh': 1}
+                                     langs: ['en', 'zh']
+                                     length_penalty: 1
+                                     lg_sampling_factor: -1
+                                     lgs: en-zh
+                                     local_rank: 0
+                                     master_port: -1
+                                     max_batch_size: 0
+                                     max_epoch: 20
+                                     max_len: 100
+                                     max_vocab: -1
+                                     min_count: 0
+                                     mlm_steps: []
+                                     mono_dataset: {'en': {'train': './data/processed/en-zh/train.en.pth', 'valid': './data/processed/en-zh/valid.en.pth', 'test': './data/processed/en-zh/test.en.pth'}, 'zh': {'train': './data/processed/en-zh/train.zh.pth', 'valid': './data/processed/en-zh/valid.zh.pth', 'test': './data/processed/en-zh/test.zh.pth'}}
+                                     mt_steps: []
+                                     multi_gpu: True
+                                     multi_node: False
+                                     n_gpu_per_node: 4
+                                     n_heads: 8
+                                     n_langs: 2
+                                     n_layers: 6
+                                     n_nodes: 1
+                                     node_id: 0
+                                     optimizer: adam,lr=0.0001
+                                     para_dataset: {('en', 'zh'): {'valid': ('./data/processed/en-zh/valid.en-zh.en.pth', './data/processed/en-zh/valid.en-zh.zh.pth'), 'test': ('./data/processed/en-zh/test.en-zh.en.pth', './data/processed/en-zh/test.en-zh.zh.pth')}}
+                                     pc_steps: []
+                                     reload_checkpoint: 
+                                     reload_emb: 
+                                     reload_model: /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth
+                                     sample_alpha: 0
+                                     save_periodic: 1
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     split_data: False
+                                     stopping_criterion: valid_en-zh_mt_bleu,10
+                                     temperature: 0.05
+                                     tokens_per_batch: 2000
+                                     ulr_words_num: 100000
+                                     use_encode_model: False
+                                     use_lang_emb: True
+                                     use_memory: False
+                                     validation_metrics: valid_en-zh_mt_bleu
+                                     word_blank: 0.1
+                                     word_dropout: 0.1
+                                     word_keep: 0.1
+                                     word_mask: 0.8
+                                     word_mask_keep_rand: 0.8,0.1,0.1
+                                     word_pred: 0.15
+                                     word_rand: 0.1
+                                     word_shuffle: 3.0
+                                     world_size: 4
+INFO - 08/26/21 18:36:38 - 0:00:00 - The experiment will be stored in ./dumped_xlm/xlm_en_zh/ii8spnlkm0
+                                     
+INFO - 08/26/21 18:36:38 - 0:00:00 - Running command: python train.py --local_rank=0 --exp_name xlm_en_zh --dump_path './dumped_xlm' --data_path './data/processed/en-zh' --lgs 'en-zh' --ae_steps 'en,zh' --word_shuffle 3 --word_dropout '0.1' --lambda_ae '0:1,100000:0.1,300000:0' --word_blank '0.1' --bt_steps 'en-zh-en,zh-en-zh' --encoder_only False --emb_dim 1024 --n_layers 6 --n_heads 8 --dropout '0.1' --attention_dropout '0.1' --gelu_activation True --tokens_per_batch 2000 --batch_size 32 --bptt 64 --optimizer 'adam,lr=0.0001' --epoch_size 10000 --max_epoch 20 --validation_metrics 'valid_en-zh_mt_bleu' --stopping_criterion 'valid_en-zh_mt_bleu,10' --save_periodic 1 --reload_model '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth' --eval_bleu True --ulr_words_num 100000 --fp16 True --amp 1
+
+WARNING - 08/26/21 18:36:38 - 0:00:00 - Signal handler installed.
+INFO - 08/26/21 18:36:38 - 0:00:00 - ============ Monolingual data (en)
+INFO - 08/26/21 18:36:38 - 0:00:00 - Loading data from ./data/processed/en-zh/train.en.pth ...
+INFO - 08/26/21 18:37:17 - 0:00:39 - 1238041500 words (97333 unique) in 50000000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:17 - 0:00:39 - 1238041500 words (97333 unique) in 50000000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:17 - 0:00:39 - 1238041500 words (97333 unique) in 50000000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:19 - 0:00:40 - 1238041500 words (97333 unique) in 50000000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:37 - 0:00:59 - Removed 52 empty sentences.
+INFO - 08/26/21 18:37:38 - 0:01:00 - Removed 52 empty sentences.
+INFO - 08/26/21 18:37:39 - 0:01:01 - Removed 52 empty sentences.
+INFO - 08/26/21 18:37:41 - 0:01:03 - Removed 77433 too long sentences.
+INFO - 08/26/21 18:37:41 - 0:01:03 - Removed 77433 too long sentences.
+
+INFO - 08/26/21 18:37:41 - 0:01:03 - Loading data from ./data/processed/en-zh/valid.en.pth ...
+INFO - 08/26/21 18:37:41 - 0:01:03 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:42 - 0:01:04 - Loading data from ./data/processed/en-zh/valid.en.pth ...
+INFO - 08/26/21 18:37:42 - 0:01:04 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:42 - 0:01:04 - Loading data from ./data/processed/en-zh/test.en.pth ...
+INFO - 08/26/21 18:37:42 - 0:01:04 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:42 - 0:01:04 - Loading data from ./data/processed/en-zh/test.en.pth ...
+INFO - 08/26/21 18:37:42 - 0:01:04 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:42 - 0:01:04 - ============ Monolingual data (zh)
+INFO - 08/26/21 18:37:42 - 0:01:04 - Loading data from ./data/processed/en-zh/train.zh.pth ...
+
+INFO - 08/26/21 18:37:42 - 0:01:04 - ============ Monolingual data (zh)
+INFO - 08/26/21 18:37:42 - 0:01:04 - Loading data from ./data/processed/en-zh/train.zh.pth ...
+INFO - 08/26/21 18:37:43 - 0:01:05 - Removed 77433 too long sentences.
+
+INFO - 08/26/21 18:37:43 - 0:01:05 - Loading data from ./data/processed/en-zh/valid.en.pth ...
+INFO - 08/26/21 18:37:44 - 0:01:05 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:44 - 0:01:06 - Loading data from ./data/processed/en-zh/test.en.pth ...
+INFO - 08/26/21 18:37:44 - 0:01:06 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:44 - 0:01:06 - ============ Monolingual data (zh)
+INFO - 08/26/21 18:37:44 - 0:01:06 - Loading data from ./data/processed/en-zh/train.zh.pth ...
+INFO - 08/26/21 18:37:48 - 0:01:10 - Removed 52 empty sentences.
+INFO - 08/26/21 18:37:52 - 0:01:13 - 302603955 words (97333 unique) in 10771382 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:52 - 0:01:13 - 302603955 words (97333 unique) in 10771382 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:52 - 0:01:14 - 302603955 words (97333 unique) in 10771382 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:52 - 0:01:14 - Removed 77433 too long sentences.
+
+INFO - 08/26/21 18:37:54 - 0:01:16 - Loading data from ./data/processed/en-zh/valid.en.pth ...
+INFO - 08/26/21 18:37:54 - 0:01:16 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:54 - 0:01:16 - Loading data from ./data/processed/en-zh/test.en.pth ...
+INFO - 08/26/21 18:37:54 - 0:01:16 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:55 - 0:01:16 - ============ Monolingual data (zh)
+INFO - 08/26/21 18:37:55 - 0:01:16 - Loading data from ./data/processed/en-zh/train.zh.pth ...
+INFO - 08/26/21 18:37:56 - 0:01:18 - Removed 15 empty sentences.
+INFO - 08/26/21 18:37:56 - 0:01:18 - Removed 15 empty sentences.
+INFO - 08/26/21 18:37:56 - 0:01:18 - Removed 15 empty sentences.
+INFO - 08/26/21 18:37:57 - 0:01:19 - 302603955 words (97333 unique) in 10771382 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:57 - 0:01:19 - Removed 53574 too long sentences.
+
+INFO - 08/26/21 18:37:57 - 0:01:19 - Loading data from ./data/processed/en-zh/valid.zh.pth ...
+INFO - 08/26/21 18:37:57 - 0:01:19 - Removed 53574 too long sentences.
+INFO - 08/26/21 18:37:57 - 0:01:19 - Removed 53574 too long sentences.
+INFO - 08/26/21 18:37:57 - 0:01:19 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:57 - 0:01:19 - Loading data from ./data/processed/en-zh/valid.zh.pth ...
+
+INFO - 08/26/21 18:37:57 - 0:01:19 - Loading data from ./data/processed/en-zh/valid.zh.pth ...
+INFO - 08/26/21 18:37:57 - 0:01:19 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:57 - 0:01:19 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:57 - 0:01:19 - Loading data from ./data/processed/en-zh/test.zh.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:19 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/test.zh.pth ...
+
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/test.zh.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+
+INFO - 08/26/21 18:37:58 - 0:01:20 - ============ Parallel data (en-zh)
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.en.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+
+
+
+INFO - 08/26/21 18:37:58 - 0:01:20 - ============ Parallel data (en-zh)
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.en.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - ============ Parallel data (en-zh)
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.en.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/valid.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - Removed 0 empty sentences.
+
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/test.en-zh.en.pth ...
+INFO - 08/26/21 18:37:58 - 0:01:20 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:58 - 0:01:20 - Loading data from ./data/processed/en-zh/test.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:59 - 0:01:20 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:59 - 0:01:20 - Removed 0 empty sentences.
+
+INFO - 08/26/21 18:37:59 - 0:01:20 - Loading data from ./data/processed/en-zh/test.en-zh.en.pth ...
+INFO - 08/26/21 18:37:59 - 0:01:20 - Removed 0 empty sentences.
+
+INFO - 08/26/21 18:37:59 - 0:01:20 - Loading data from ./data/processed/en-zh/test.en-zh.en.pth ...
+INFO - 08/26/21 18:37:59 - 0:01:21 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:59 - 0:01:21 - Loading data from ./data/processed/en-zh/test.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:59 - 0:01:21 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:59 - 0:01:21 - Loading data from ./data/processed/en-zh/test.en-zh.zh.pth ...
+INFO - 08/26/21 18:37:59 - 0:01:21 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:59 - 0:01:21 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:37:59 - 0:01:21 - Removed 0 empty sentences.
+
+
+INFO - 08/26/21 18:37:59 - 0:01:21 - ============ Data summary
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           en:  50000000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           en:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           en:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           zh:  10771382
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           zh:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      - valid -        en-zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      -  test -        en-zh:      2000
+
+INFO - 08/26/21 18:37:59 - 0:01:21 - Removed 0 empty sentences.
+
+
+INFO - 08/26/21 18:37:59 - 0:01:21 - ============ Data summary
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           en:  50000000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           en:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           en:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           zh:  10771382
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           zh:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      - valid -        en-zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      -  test -        en-zh:      2000
+
+INFO - 08/26/21 18:37:59 - 0:01:21 - Removed 0 empty sentences.
+
+
+INFO - 08/26/21 18:37:59 - 0:01:21 - ============ Data summary
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           en:  50000000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           en:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           en:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - train -           zh:  10771382
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   - valid -           zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Monolingual data   -  test -           zh:      2000
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      - valid -        en-zh:      2002
+INFO - 08/26/21 18:37:59 - 0:01:21 - Parallel data      -  test -        en-zh:      2000
+
+INFO - 08/26/21 18:38:01 - 0:01:23 - Removed 15 empty sentences.
+INFO - 08/26/21 18:38:02 - 0:01:24 - Removed 53574 too long sentences.
+
+INFO - 08/26/21 18:38:02 - 0:01:24 - Loading data from ./data/processed/en-zh/valid.zh.pth ...
+INFO - 08/26/21 18:38:02 - 0:01:24 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+
+INFO - 08/26/21 18:38:02 - 0:01:24 - Loading data from ./data/processed/en-zh/test.zh.pth ...
+INFO - 08/26/21 18:38:03 - 0:01:24 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+
+
+INFO - 08/26/21 18:38:03 - 0:01:25 - ============ Parallel data (en-zh)
+INFO - 08/26/21 18:38:03 - 0:01:25 - Loading data from ./data/processed/en-zh/valid.en-zh.en.pth ...
+INFO - 08/26/21 18:38:03 - 0:01:25 - 61843 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:38:03 - 0:01:25 - Loading data from ./data/processed/en-zh/valid.en-zh.zh.pth ...
+INFO - 08/26/21 18:38:03 - 0:01:25 - 56620 words (97333 unique) in 2002 sentences. 1 unknown words (1 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:38:03 - 0:01:25 - Removed 0 empty sentences.
+
+INFO - 08/26/21 18:38:03 - 0:01:25 - Loading data from ./data/processed/en-zh/test.en-zh.en.pth ...
+INFO - 08/26/21 18:38:03 - 0:01:25 - 84912 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:38:03 - 0:01:25 - Loading data from ./data/processed/en-zh/test.en-zh.zh.pth ...
+INFO - 08/26/21 18:38:03 - 0:01:25 - 65097 words (97333 unique) in 2000 sentences. 0 unknown words (0 unique) covering 0.00% of the data.
+INFO - 08/26/21 18:38:04 - 0:01:26 - Removed 0 empty sentences.
+
+
+INFO - 08/26/21 18:38:04 - 0:01:26 - ============ Data summary
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   - train -           en:  50000000
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   - valid -           en:      2002
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   -  test -           en:      2000
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   - train -           zh:  10771382
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   - valid -           zh:      2002
+INFO - 08/26/21 18:38:04 - 0:01:26 - Monolingual data   -  test -           zh:      2000
+INFO - 08/26/21 18:38:04 - 0:01:26 - Parallel data      - valid -        en-zh:      2002
+INFO - 08/26/21 18:38:04 - 0:01:26 - Parallel data      -  test -        en-zh:      2000
+
+INFO - 08/26/21 18:38:09 - 0:01:30 - Reloading encoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+INFO - 08/26/21 18:38:09 - 0:01:31 - Reloading encoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+INFO - 08/26/21 18:38:09 - 0:01:31 - Reloading encoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+INFO - 08/26/21 18:38:13 - 0:01:35 - Reloading encoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+########all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+########all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+########all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+########all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+########################
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+INFO - 08/26/21 18:38:27 - 0:01:49 - Reloading decoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+########################
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+INFO - 08/26/21 18:38:27 - 0:01:49 - Reloading decoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+########################
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+INFO - 08/26/21 18:38:27 - 0:01:49 - Reloading decoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+########################
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+INFO - 08/26/21 18:38:27 - 0:01:49 - Reloading decoder from /data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth ...
+###decoder all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.weight', 'pred_layer.proj.bias']
+################decoder load
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (encoder): 179554304
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (decoder): 204854325
+###decoder all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.weight', 'pred_layer.proj.bias']
+################decoder load
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (encoder): 179554304
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (decoder): 204854325
+###decoder all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.weight', 'pred_layer.proj.bias']
+################decoder load
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (encoder): 179554304
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (decoder): 204854325
+###decoder all parameter ['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.weight', 'pred_layer.proj.bias']
+################decoder load
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (encoder): 179554304
+INFO - 08/26/21 18:38:30 - 0:01:52 - Number of parameters (decoder): 204854325
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 0 memories.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 12 FFN.
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 265 parameters in model.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Optimizers: model
+INFO - 08/26/21 18:38:31 - 0:01:53 - Using apex.parallel.DistributedDataParallel ...
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 0 memories.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 12 FFN.
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 265 parameters in model.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 0 memories.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 12 FFN.
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:31 - 0:01:53 - Optimizers: model
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 265 parameters in model.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Using apex.parallel.DistributedDataParallel ...
+INFO - 08/26/21 18:38:31 - 0:01:53 - Optimizers: model
+INFO - 08/26/21 18:38:31 - 0:01:53 - Using apex.parallel.DistributedDataParallel ...
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 0 memories.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 12 FFN.
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias']
+['ulr.embeddings.weight', 'ulr.A.weight', 'position_embeddings.weight', 'lang_embeddings.weight', 'layer_norm_emb.weight', 'layer_norm_emb.bias', 'attentions.0.q_lin.weight', 'attentions.0.q_lin.bias', 'attentions.0.k_lin.weight', 'attentions.0.k_lin.bias', 'attentions.0.v_lin.weight', 'attentions.0.v_lin.bias', 'attentions.0.out_lin.weight', 'attentions.0.out_lin.bias', 'attentions.1.q_lin.weight', 'attentions.1.q_lin.bias', 'attentions.1.k_lin.weight', 'attentions.1.k_lin.bias', 'attentions.1.v_lin.weight', 'attentions.1.v_lin.bias', 'attentions.1.out_lin.weight', 'attentions.1.out_lin.bias', 'attentions.2.q_lin.weight', 'attentions.2.q_lin.bias', 'attentions.2.k_lin.weight', 'attentions.2.k_lin.bias', 'attentions.2.v_lin.weight', 'attentions.2.v_lin.bias', 'attentions.2.out_lin.weight', 'attentions.2.out_lin.bias', 'attentions.3.q_lin.weight', 'attentions.3.q_lin.bias', 'attentions.3.k_lin.weight', 'attentions.3.k_lin.bias', 'attentions.3.v_lin.weight', 'attentions.3.v_lin.bias', 'attentions.3.out_lin.weight', 'attentions.3.out_lin.bias', 'attentions.4.q_lin.weight', 'attentions.4.q_lin.bias', 'attentions.4.k_lin.weight', 'attentions.4.k_lin.bias', 'attentions.4.v_lin.weight', 'attentions.4.v_lin.bias', 'attentions.4.out_lin.weight', 'attentions.4.out_lin.bias', 'attentions.5.q_lin.weight', 'attentions.5.q_lin.bias', 'attentions.5.k_lin.weight', 'attentions.5.k_lin.bias', 'attentions.5.v_lin.weight', 'attentions.5.v_lin.bias', 'attentions.5.out_lin.weight', 'attentions.5.out_lin.bias', 'layer_norm1.0.weight', 'layer_norm1.0.bias', 'layer_norm1.1.weight', 'layer_norm1.1.bias', 'layer_norm1.2.weight', 'layer_norm1.2.bias', 'layer_norm1.3.weight', 'layer_norm1.3.bias', 'layer_norm1.4.weight', 'layer_norm1.4.bias', 'layer_norm1.5.weight', 'layer_norm1.5.bias', 'ffns.0.lin1.weight', 'ffns.0.lin1.bias', 'ffns.0.lin2.weight', 'ffns.0.lin2.bias', 'ffns.1.lin1.weight', 'ffns.1.lin1.bias', 'ffns.1.lin2.weight', 'ffns.1.lin2.bias', 'ffns.2.lin1.weight', 'ffns.2.lin1.bias', 'ffns.2.lin2.weight', 'ffns.2.lin2.bias', 'ffns.3.lin1.weight', 'ffns.3.lin1.bias', 'ffns.3.lin2.weight', 'ffns.3.lin2.bias', 'ffns.4.lin1.weight', 'ffns.4.lin1.bias', 'ffns.4.lin2.weight', 'ffns.4.lin2.bias', 'ffns.5.lin1.weight', 'ffns.5.lin1.bias', 'ffns.5.lin2.weight', 'ffns.5.lin2.bias', 'layer_norm2.0.weight', 'layer_norm2.0.bias', 'layer_norm2.1.weight', 'layer_norm2.1.bias', 'layer_norm2.2.weight', 'layer_norm2.2.bias', 'layer_norm2.3.weight', 'layer_norm2.3.bias', 'layer_norm2.4.weight', 'layer_norm2.4.bias', 'layer_norm2.5.weight', 'layer_norm2.5.bias', 'layer_norm15.0.weight', 'layer_norm15.0.bias', 'layer_norm15.1.weight', 'layer_norm15.1.bias', 'layer_norm15.2.weight', 'layer_norm15.2.bias', 'layer_norm15.3.weight', 'layer_norm15.3.bias', 'layer_norm15.4.weight', 'layer_norm15.4.bias', 'layer_norm15.5.weight', 'layer_norm15.5.bias', 'encoder_attn.0.q_lin.weight', 'encoder_attn.0.q_lin.bias', 'encoder_attn.0.k_lin.weight', 'encoder_attn.0.k_lin.bias', 'encoder_attn.0.v_lin.weight', 'encoder_attn.0.v_lin.bias', 'encoder_attn.0.out_lin.weight', 'encoder_attn.0.out_lin.bias', 'encoder_attn.1.q_lin.weight', 'encoder_attn.1.q_lin.bias', 'encoder_attn.1.k_lin.weight', 'encoder_attn.1.k_lin.bias', 'encoder_attn.1.v_lin.weight', 'encoder_attn.1.v_lin.bias', 'encoder_attn.1.out_lin.weight', 'encoder_attn.1.out_lin.bias', 'encoder_attn.2.q_lin.weight', 'encoder_attn.2.q_lin.bias', 'encoder_attn.2.k_lin.weight', 'encoder_attn.2.k_lin.bias', 'encoder_attn.2.v_lin.weight', 'encoder_attn.2.v_lin.bias', 'encoder_attn.2.out_lin.weight', 'encoder_attn.2.out_lin.bias', 'encoder_attn.3.q_lin.weight', 'encoder_attn.3.q_lin.bias', 'encoder_attn.3.k_lin.weight', 'encoder_attn.3.k_lin.bias', 'encoder_attn.3.v_lin.weight', 'encoder_attn.3.v_lin.bias', 'encoder_attn.3.out_lin.weight', 'encoder_attn.3.out_lin.bias', 'encoder_attn.4.q_lin.weight', 'encoder_attn.4.q_lin.bias', 'encoder_attn.4.k_lin.weight', 'encoder_attn.4.k_lin.bias', 'encoder_attn.4.v_lin.weight', 'encoder_attn.4.v_lin.bias', 'encoder_attn.4.out_lin.weight', 'encoder_attn.4.out_lin.bias', 'encoder_attn.5.q_lin.weight', 'encoder_attn.5.q_lin.bias', 'encoder_attn.5.k_lin.weight', 'encoder_attn.5.k_lin.bias', 'encoder_attn.5.v_lin.weight', 'encoder_attn.5.v_lin.bias', 'encoder_attn.5.out_lin.weight', 'encoder_attn.5.out_lin.bias', 'pred_layer.proj.bias']
+INFO - 08/26/21 18:38:31 - 0:01:53 - Found 265 parameters in model.
+INFO - 08/26/21 18:38:31 - 0:01:53 - Optimizers: model
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+INFO - 08/26/21 18:38:31 - 0:01:53 - Using apex.parallel.DistributedDataParallel ...
+INFO - 08/26/21 18:38:32 - 0:01:54 - ============ Starting epoch 0 ... ============
+INFO - 08/26/21 18:38:32 - 0:01:54 - ============ Starting epoch 0 ... ============
+INFO - 08/26/21 18:38:32 - 0:01:54 - ============ Starting epoch 0 ... ============
+INFO - 08/26/21 18:38:32 - 0:01:54 - Creating new training data iterator (ae,zh) ...
+INFO - 08/26/21 18:38:32 - 0:01:54 - Creating new training data iterator (ae,en) ...
+INFO - 08/26/21 18:38:32 - 0:01:54 - Creating new training data iterator (ae,en) ...
+INFO - 08/26/21 18:38:36 - 0:01:58 - ============ Starting epoch 0 ... ============
+INFO - 08/26/21 18:38:36 - 0:01:58 - Creating new training data iterator (ae,zh) ...
+INFO - 08/26/21 18:38:53 - 0:02:15 - Creating new training data iterator (ae,zh) ...
+INFO - 08/26/21 18:38:53 - 0:02:15 - Creating new training data iterator (ae,en) ...
+INFO - 08/26/21 18:38:53 - 0:02:15 - Creating new training data iterator (ae,zh) ...
+INFO - 08/26/21 18:38:53 - 0:02:15 - Creating new training data iterator (ae,en) ...
+INFO - 08/26/21 18:39:17 - 0:02:39 - Creating new training data iterator (bt,zh) ...
+INFO - 08/26/21 18:39:17 - 0:02:39 - Creating new training data iterator (bt,en) ...
+INFO - 08/26/21 18:39:17 - 0:02:39 - Creating new training data iterator (bt,zh) ...
+INFO - 08/26/21 18:39:17 - 0:02:39 - Creating new training data iterator (bt,zh) ...
+INFO - 08/26/21 18:39:40 - 0:03:02 - Creating new training data iterator (bt,en) ...
+INFO - 08/26/21 18:39:40 - 0:03:02 - Creating new training data iterator (bt,en) ...
+INFO - 08/26/21 18:39:40 - 0:03:02 - Creating new training data iterator (bt,zh) ...
+INFO - 08/26/21 18:39:40 - 0:03:02 - Creating new training data iterator (bt,en) ...
+INFO - 08/26/21 18:40:29 - 0:03:51 -       5 -   11.94 sent/s -   330.87 words/s - AE-en:  0.9834 || AE-zh:  1.0903 || BT-en-zh-en:  1.6263 || BT-zh-en-zh:  2.3487 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:29 - 0:03:51 -       5 -   10.01 sent/s -   331.16 words/s - AE-en:  0.9887 || AE-zh:  1.1751 || BT-en-zh-en:  1.6858 || BT-zh-en-zh:  2.3474 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:29 - 0:03:51 -       5 -   15.64 sent/s -   327.02 words/s - AE-en:  0.9599 || AE-zh:  1.1126 || BT-en-zh-en:  1.6569 || BT-zh-en-zh:  2.1459 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:29 - 0:03:51 -       5 -   11.80 sent/s -   330.05 words/s - AE-en:  0.9860 || AE-zh:  1.0978 || BT-en-zh-en:  1.6195 || BT-zh-en-zh:  2.1773 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:53 - 0:04:15 -      10 -   49.15 sent/s -  1622.53 words/s - AE-en:  0.9738 || AE-zh:  1.0701 || BT-en-zh-en:  1.6423 || BT-zh-en-zh:  2.2651 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:53 - 0:04:15 -      10 -   67.79 sent/s -  1604.51 words/s - AE-en:  0.9557 || AE-zh:  1.0957 || BT-en-zh-en:  1.6027 || BT-zh-en-zh:  2.1834 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:53 - 0:04:15 -      10 -   64.75 sent/s -  1600.99 words/s - AE-en:  0.9590 || AE-zh:  1.1299 || BT-en-zh-en:  1.6310 || BT-zh-en-zh:  2.1235 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:40:53 - 0:04:15 -      10 -   66.78 sent/s -  1595.97 words/s - AE-en:  0.9744 || AE-zh:  1.0950 || BT-en-zh-en:  1.6212 || BT-zh-en-zh:  2.3254 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:19 - 0:04:41 -      15 -   46.84 sent/s -  1507.00 words/s - AE-en:  1.0049 || AE-zh:  1.1071 || BT-en-zh-en:  1.6257 || BT-zh-en-zh:  2.1890 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:19 - 0:04:41 -      15 -   61.17 sent/s -  1493.02 words/s - AE-en:  1.0498 || AE-zh:  1.0995 || BT-en-zh-en:  1.6071 || BT-zh-en-zh:  2.0502 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:19 - 0:04:41 -      15 -   54.06 sent/s -  1500.39 words/s - AE-en:  0.9192 || AE-zh:  1.1008 || BT-en-zh-en:  1.6053 || BT-zh-en-zh:  2.0998 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:19 - 0:04:41 -      15 -   51.16 sent/s -  1495.93 words/s - AE-en:  0.9297 || AE-zh:  1.0757 || BT-en-zh-en:  1.6238 || BT-zh-en-zh:  2.1648 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:46 - 0:05:08 -      20 -   44.06 sent/s -  1416.11 words/s - AE-en:  0.9739 || AE-zh:  1.1470 || BT-en-zh-en:  1.7171 || BT-zh-en-zh:  2.0484 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:46 - 0:05:08 -      20 -   51.03 sent/s -  1412.96 words/s - AE-en:  0.9512 || AE-zh:  1.1084 || BT-en-zh-en:  1.6097 || BT-zh-en-zh:  2.1227 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:46 - 0:05:08 -      20 -   51.70 sent/s -  1414.87 words/s - AE-en:  0.9953 || AE-zh:  1.1038 || BT-en-zh-en:  1.7071 || BT-zh-en-zh:  2.0774 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:41:46 - 0:05:08 -      20 -   59.96 sent/s -  1398.86 words/s - AE-en:  1.0086 || AE-zh:  1.0798 || BT-en-zh-en:  1.5965 || BT-zh-en-zh:  2.0831 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:13 - 0:05:35 -      25 -   49.73 sent/s -  1438.78 words/s - AE-en:  1.0253 || AE-zh:  1.0462 || BT-en-zh-en:  1.6665 || BT-zh-en-zh:  2.0536 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:13 - 0:05:35 -      25 -   50.52 sent/s -  1441.84 words/s - AE-en:  0.9794 || AE-zh:  1.0631 || BT-en-zh-en:  1.6139 || BT-zh-en-zh:  2.1481 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:13 - 0:05:35 -      25 -   56.01 sent/s -  1438.73 words/s - AE-en:  1.0004 || AE-zh:  1.1127 || BT-en-zh-en:  1.5956 || BT-zh-en-zh:  2.1924 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:13 - 0:05:35 -      25 -   69.86 sent/s -  1420.73 words/s - AE-en:  0.9828 || AE-zh:  1.1229 || BT-en-zh-en:  1.5048 || BT-zh-en-zh:  2.1488 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:38 - 0:06:00 -      30 -   63.69 sent/s -  1546.46 words/s - AE-en:  0.9374 || AE-zh:  1.0988 || BT-en-zh-en:  1.6773 || BT-zh-en-zh:  2.0033 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:38 - 0:06:00 -      30 -   54.97 sent/s -  1555.08 words/s - AE-en:  1.0284 || AE-zh:  1.1033 || BT-en-zh-en:  1.5591 || BT-zh-en-zh:  2.2378 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:38 - 0:06:00 -      30 -   52.73 sent/s -  1550.05 words/s - AE-en:  0.9542 || AE-zh:  1.1661 || BT-en-zh-en:  1.7306 || BT-zh-en-zh:  2.1549 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:42:38 - 0:06:00 -      30 -   56.35 sent/s -  1542.32 words/s - AE-en:  0.9568 || AE-zh:  1.1188 || BT-en-zh-en:  1.6552 || BT-zh-en-zh:  2.1396 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:04 - 0:06:26 -      35 -   60.70 sent/s -  1467.88 words/s - AE-en:  0.9573 || AE-zh:  1.0997 || BT-en-zh-en:  1.7406 || BT-zh-en-zh:  2.0661 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:04 - 0:06:26 -      35 -   47.62 sent/s -  1481.89 words/s - AE-en:  0.8822 || AE-zh:  1.0857 || BT-en-zh-en:  1.6317 || BT-zh-en-zh:  2.3511 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:04 - 0:06:26 -      35 -   51.14 sent/s -  1474.69 words/s - AE-en:  0.9619 || AE-zh:  1.1169 || BT-en-zh-en:  1.5402 || BT-zh-en-zh:  2.4221 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:04 - 0:06:26 -      35 -   53.20 sent/s -  1469.90 words/s - AE-en:  0.9834 || AE-zh:  1.1163 || BT-en-zh-en:  1.5419 || BT-zh-en-zh:  2.2319 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:32 - 0:06:53 -      40 -   55.46 sent/s -  1400.13 words/s - AE-en:  0.9224 || AE-zh:  1.1141 || BT-en-zh-en:  1.5953 || BT-zh-en-zh:  2.1524 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:32 - 0:06:53 -      40 -   52.04 sent/s -  1403.67 words/s - AE-en:  0.9597 || AE-zh:  1.0588 || BT-en-zh-en:  1.5287 || BT-zh-en-zh:  2.2491 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:32 - 0:06:53 -      40 -   58.81 sent/s -  1398.80 words/s - AE-en:  0.9697 || AE-zh:  1.1101 || BT-en-zh-en:  1.5316 || BT-zh-en-zh:  2.2475 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:32 - 0:06:54 -      40 -   49.85 sent/s -  1406.89 words/s - AE-en:  0.9413 || AE-zh:  1.1187 || BT-en-zh-en:  1.5108 || BT-zh-en-zh:  2.1401 -  - model LR: 1.0000e-04
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 32768.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 32768.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 32768.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 32768.0
+INFO - 08/26/21 18:43:59 - 0:07:21 -      45 -   54.23 sent/s -  1424.93 words/s - AE-en:  0.9400 || AE-zh:  1.0518 || BT-en-zh-en:  1.6465 || BT-zh-en-zh:  2.1374 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:59 - 0:07:20 -      45 -   72.07 sent/s -  1405.68 words/s - AE-en:  0.9247 || AE-zh:  1.0721 || BT-en-zh-en:  1.6444 || BT-zh-en-zh:  2.1064 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:59 - 0:07:21 -      45 -   56.14 sent/s -  1424.92 words/s - AE-en:  0.9820 || AE-zh:  1.0705 || BT-en-zh-en:  1.5627 || BT-zh-en-zh:  2.1525 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:43:59 - 0:07:21 -      45 -   60.75 sent/s -  1416.89 words/s - AE-en:  0.9520 || AE-zh:  1.0897 || BT-en-zh-en:  1.5427 || BT-zh-en-zh:  2.2207 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:23 - 0:07:45 -      50 -   61.38 sent/s -  1564.70 words/s - AE-en:  0.9498 || AE-zh:  1.0569 || BT-en-zh-en:  1.4940 || BT-zh-en-zh:  2.0946 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:23 - 0:07:45 -      50 -   64.04 sent/s -  1564.47 words/s - AE-en:  0.9843 || AE-zh:  1.0928 || BT-en-zh-en:  1.5582 || BT-zh-en-zh:  2.0588 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:23 - 0:07:45 -      50 -   56.37 sent/s -  1569.50 words/s - AE-en:  0.9505 || AE-zh:  1.0483 || BT-en-zh-en:  1.5624 || BT-zh-en-zh:  2.3381 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:23 - 0:07:45 -      50 -   60.02 sent/s -  1572.19 words/s - AE-en:  1.0222 || AE-zh:  1.1182 || BT-en-zh-en:  1.5553 || BT-zh-en-zh:  1.9716 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:49 - 0:08:11 -      55 -   44.12 sent/s -  1518.56 words/s - AE-en:  0.9864 || AE-zh:  1.1264 || BT-en-zh-en:  1.5340 || BT-zh-en-zh:  2.3095 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:49 - 0:08:11 -      55 -   70.56 sent/s -  1492.09 words/s - AE-en:  0.9495 || AE-zh:  1.0939 || BT-en-zh-en:  1.5219 || BT-zh-en-zh:  2.0446 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:49 - 0:08:11 -      55 -   52.64 sent/s -  1511.93 words/s - AE-en:  0.9936 || AE-zh:  1.0449 || BT-en-zh-en:  1.5433 || BT-zh-en-zh:  2.1619 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:44:49 - 0:08:11 -      55 -   61.97 sent/s -  1505.79 words/s - AE-en:  0.9410 || AE-zh:  1.0637 || BT-en-zh-en:  1.5604 || BT-zh-en-zh:  2.3678 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:17 - 0:08:39 -      60 -   44.19 sent/s -  1360.20 words/s - AE-en:  0.9782 || AE-zh:  1.2000 || BT-en-zh-en:  1.5442 || BT-zh-en-zh:  2.2529 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:17 - 0:08:39 -      60 -   43.46 sent/s -  1360.44 words/s - AE-en:  0.9965 || AE-zh:  1.0609 || BT-en-zh-en:  1.6020 || BT-zh-en-zh:  2.0961 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:17 - 0:08:39 -      60 -   44.30 sent/s -  1360.73 words/s - AE-en:  0.9450 || AE-zh:  1.0174 || BT-en-zh-en:  1.5740 || BT-zh-en-zh:  2.1254 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:17 - 0:08:39 -      60 -   65.02 sent/s -  1338.38 words/s - AE-en:  1.0163 || AE-zh:  1.0592 || BT-en-zh-en:  1.5796 || BT-zh-en-zh:  2.2230 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:43 - 0:09:05 -      65 -   57.83 sent/s -  1513.27 words/s - AE-en:  0.9513 || AE-zh:  1.1177 || BT-en-zh-en:  1.6339 || BT-zh-en-zh:  2.1374 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:43 - 0:09:05 -      65 -   59.41 sent/s -  1505.03 words/s - AE-en:  0.9643 || AE-zh:  1.0775 || BT-en-zh-en:  1.6294 || BT-zh-en-zh:  2.2186 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:43 - 0:09:05 -      65 -   53.52 sent/s -  1516.55 words/s - AE-en:  0.9770 || AE-zh:  1.1325 || BT-en-zh-en:  1.7078 || BT-zh-en-zh:  2.1658 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:45:43 - 0:09:05 -      65 -   58.56 sent/s -  1510.34 words/s - AE-en:  0.9154 || AE-zh:  1.0311 || BT-en-zh-en:  1.6469 || BT-zh-en-zh:  2.0568 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:09 - 0:09:31 -      70 -   51.52 sent/s -  1493.58 words/s - AE-en:  0.9299 || AE-zh:  1.1451 || BT-en-zh-en:  1.5948 || BT-zh-en-zh:  2.0758 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:09 - 0:09:31 -      70 -   44.65 sent/s -  1497.91 words/s - AE-en:  0.9509 || AE-zh:  1.0787 || BT-en-zh-en:  1.5959 || BT-zh-en-zh:  2.1937 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:09 - 0:09:31 -      70 -   62.94 sent/s -  1480.75 words/s - AE-en:  0.9635 || AE-zh:  1.1181 || BT-en-zh-en:  1.5778 || BT-zh-en-zh:  2.0781 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:09 - 0:09:31 -      70 -   63.18 sent/s -  1478.66 words/s - AE-en:  0.9780 || AE-zh:  1.1179 || BT-en-zh-en:  1.6178 || BT-zh-en-zh:  2.1112 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:35 - 0:09:57 -      75 -   66.87 sent/s -  1467.66 words/s - AE-en:  0.9668 || AE-zh:  1.0522 || BT-en-zh-en:  1.5615 || BT-zh-en-zh:  2.0017 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:35 - 0:09:57 -      75 -   44.18 sent/s -  1491.89 words/s - AE-en:  0.9862 || AE-zh:  1.1104 || BT-en-zh-en:  1.6197 || BT-zh-en-zh:  2.2646 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:35 - 0:09:57 -      75 -   45.75 sent/s -  1481.27 words/s - AE-en:  0.9513 || AE-zh:  1.0860 || BT-en-zh-en:  1.6817 || BT-zh-en-zh:  2.3633 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:35 - 0:09:57 -      75 -   75.22 sent/s -  1455.02 words/s - AE-en:  0.8965 || AE-zh:  1.0525 || BT-en-zh-en:  1.5563 || BT-zh-en-zh:  2.2161 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:46:56 - 0:10:18 - ============ End of epoch 0 ============
+INFO - 08/26/21 18:46:56 - 0:10:18 - ============ End of epoch 0 ============
+INFO - 08/26/21 18:46:56 - 0:10:18 - ============ End of epoch 0 ============
+INFO - 08/26/21 18:46:56 - 0:10:18 - ============ End of epoch 0 ============
+INFO - 08/26/21 18:47:26 - 0:10:48 - epoch -> 0.000000
+INFO - 08/26/21 18:47:26 - 0:10:48 - valid_en-zh_mt_ppl -> 81.178255
+INFO - 08/26/21 18:47:26 - 0:10:48 - valid_en-zh_mt_acc -> 35.160861
+INFO - 08/26/21 18:47:26 - 0:10:48 - valid_zh-en_mt_ppl -> 75.589709
+INFO - 08/26/21 18:47:26 - 0:10:48 - valid_zh-en_mt_acc -> 35.116297
+INFO - 08/26/21 18:47:26 - 0:10:48 - test_en-zh_mt_ppl -> 48.691324
+INFO - 08/26/21 18:47:26 - 0:10:48 - test_en-zh_mt_acc -> 40.179144
+INFO - 08/26/21 18:47:26 - 0:10:48 - test_zh-en_mt_ppl -> 74.985865
+INFO - 08/26/21 18:47:26 - 0:10:48 - test_zh-en_mt_acc -> 34.354289
+INFO - 08/26/21 18:47:26 - 0:10:48 - ============ Starting epoch 1 ... ============
+INFO - 08/26/21 18:47:27 - 0:10:49 - epoch -> 0.000000
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_en-zh_mt_ppl -> 81.178255
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_en-zh_mt_acc -> 35.160861
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_zh-en_mt_ppl -> 75.589709
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_zh-en_mt_acc -> 35.116297
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_en-zh_mt_ppl -> 48.691324
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_en-zh_mt_acc -> 40.179144
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_zh-en_mt_ppl -> 74.985865
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_zh-en_mt_acc -> 34.354289
+INFO - 08/26/21 18:47:27 - 0:10:49 - ============ Starting epoch 1 ... ============
+INFO - 08/26/21 18:47:27 - 0:10:49 - epoch -> 0.000000
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_en-zh_mt_ppl -> 81.178255
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_en-zh_mt_acc -> 35.160861
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_zh-en_mt_ppl -> 75.589709
+INFO - 08/26/21 18:47:27 - 0:10:49 - valid_zh-en_mt_acc -> 35.116297
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_en-zh_mt_ppl -> 48.691324
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_en-zh_mt_acc -> 40.179144
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_zh-en_mt_ppl -> 74.985865
+INFO - 08/26/21 18:47:27 - 0:10:49 - test_zh-en_mt_acc -> 34.354289
+INFO - 08/26/21 18:47:27 - 0:10:49 - ============ Starting epoch 1 ... ============
+INFO - 08/26/21 18:47:57 - 0:11:19 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp0.en-zh.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.valid.txt : 6.010000
+INFO - 08/26/21 18:48:54 - 0:12:16 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp0.zh-en.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.valid.txt : 6.130000
+INFO - 08/26/21 18:50:20 - 0:13:41 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp0.en-zh.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.test.txt : 7.450000
+INFO - 08/26/21 18:51:31 - 0:14:53 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp0.zh-en.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.test.txt : 5.440000
+INFO - 08/26/21 18:51:31 - 0:14:53 - epoch -> 0.000000
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_en-zh_mt_ppl -> 81.178255
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_en-zh_mt_acc -> 35.160861
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_en-zh_mt_bleu -> 6.010000
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_zh-en_mt_ppl -> 75.589709
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_zh-en_mt_acc -> 35.116297
+INFO - 08/26/21 18:51:31 - 0:14:53 - valid_zh-en_mt_bleu -> 6.130000
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_en-zh_mt_ppl -> 48.691324
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_en-zh_mt_acc -> 40.179144
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_en-zh_mt_bleu -> 7.450000
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_zh-en_mt_ppl -> 74.985865
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_zh-en_mt_acc -> 34.354289
+INFO - 08/26/21 18:51:31 - 0:14:53 - test_zh-en_mt_bleu -> 5.440000
+INFO - 08/26/21 18:51:31 - 0:14:53 - __log__:{"epoch": 0, "valid_en-zh_mt_ppl": 81.17825513529961, "valid_en-zh_mt_acc": 35.16086111016342, "valid_en-zh_mt_bleu": 6.01, "valid_zh-en_mt_ppl": 75.58970910047142, "valid_zh-en_mt_acc": 35.11629728248101, "valid_zh-en_mt_bleu": 6.13, "test_en-zh_mt_ppl": 48.69132398939978, "test_en-zh_mt_acc": 40.17914362788202, "test_en-zh_mt_bleu": 7.45, "test_zh-en_mt_ppl": 74.98586472312664, "test_zh-en_mt_acc": 34.35428939617084, "test_zh-en_mt_bleu": 5.44}
+INFO - 08/26/21 18:51:31 - 0:14:53 - New best score for valid_en-zh_mt_bleu: 6.010000
+INFO - 08/26/21 18:51:31 - 0:14:53 - Saving best-valid_en-zh_mt_bleu to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/best-valid_en-zh_mt_bleu.pth ...
+WARNING - 08/26/21 18:51:31 - 0:14:53 - Saving encoder parameters ...
+WARNING - 08/26/21 18:51:31 - 0:14:53 - Saving decoder parameters ...
+INFO - 08/26/21 18:51:35 - 0:14:57 - Saving periodic-0 to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/periodic-0.pth ...
+WARNING - 08/26/21 18:51:35 - 0:14:57 - Saving encoder parameters ...
+WARNING - 08/26/21 18:51:35 - 0:14:57 - Saving decoder parameters ...
+INFO - 08/26/21 18:51:38 - 0:15:00 - New best validation score: 6.010000
+INFO - 08/26/21 18:51:38 - 0:15:00 - Saving checkpoint to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/checkpoint.pth ...
+WARNING - 08/26/21 18:51:38 - 0:15:00 - Saving encoder parameters ...
+WARNING - 08/26/21 18:51:38 - 0:15:00 - Saving decoder parameters ...
+WARNING - 08/26/21 18:51:38 - 0:15:00 - Saving model optimizer ...
+INFO - 08/26/21 18:51:44 - 0:15:06 - ============ Starting epoch 1 ... ============
+INFO - 08/26/21 18:51:49 - 0:15:11 -      80 -    4.19 sent/s -   123.15 words/s - AE-en:  1.0293 || AE-zh:  1.1280 || BT-en-zh-en:  1.6315 || BT-zh-en-zh:  1.9718 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:51:49 - 0:15:11 -      80 -    4.12 sent/s -   123.25 words/s - AE-en:  1.0321 || AE-zh:  1.0433 || BT-en-zh-en:  1.6069 || BT-zh-en-zh:  2.0041 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:51:49 - 0:15:11 -      80 -    3.90 sent/s -   123.54 words/s - AE-en:  1.0575 || AE-zh:  1.1083 || BT-en-zh-en:  1.5494 || BT-zh-en-zh:  2.0273 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:51:49 - 0:15:11 -      80 -    4.45 sent/s -   122.74 words/s - AE-en:  0.9522 || AE-zh:  1.1506 || BT-en-zh-en:  1.5923 || BT-zh-en-zh:  1.9746 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:16 - 0:15:37 -      85 -   43.63 sent/s -  1457.80 words/s - AE-en:  0.9583 || AE-zh:  1.1483 || BT-en-zh-en:  1.5439 || BT-zh-en-zh:  2.2310 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:16 - 0:15:37 -      85 -   59.65 sent/s -  1442.79 words/s - AE-en:  0.9143 || AE-zh:  1.0138 || BT-en-zh-en:  1.5245 || BT-zh-en-zh:  2.1992 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:16 - 0:15:37 -      85 -   52.93 sent/s -  1447.47 words/s - AE-en:  0.9635 || AE-zh:  1.0812 || BT-en-zh-en:  1.5135 || BT-zh-en-zh:  2.1569 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:16 - 0:15:37 -      85 -   37.06 sent/s -  1459.92 words/s - AE-en:  0.9485 || AE-zh:  1.1169 || BT-en-zh-en:  1.5706 || BT-zh-en-zh:  2.3390 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:41 - 0:16:03 -      90 -   47.85 sent/s -  1503.15 words/s - AE-en:  0.9789 || AE-zh:  1.0711 || BT-en-zh-en:  1.6039 || BT-zh-en-zh:  2.2616 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:41 - 0:16:03 -      90 -   54.08 sent/s -  1493.03 words/s - AE-en:  0.9633 || AE-zh:  1.0538 || BT-en-zh-en:  1.6258 || BT-zh-en-zh:  2.0024 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:41 - 0:16:03 -      90 -   57.70 sent/s -  1486.06 words/s - AE-en:  0.9126 || AE-zh:  1.1194 || BT-en-zh-en:  1.5056 || BT-zh-en-zh:  2.0930 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:52:41 - 0:16:03 -      90 -   57.35 sent/s -  1489.95 words/s - AE-en:  0.9622 || AE-zh:  1.0653 || BT-en-zh-en:  1.6388 || BT-zh-en-zh:  2.0650 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:06 - 0:16:28 -      95 -   64.27 sent/s -  1540.20 words/s - AE-en:  0.9563 || AE-zh:  1.1215 || BT-en-zh-en:  1.5894 || BT-zh-en-zh:  2.0612 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:06 - 0:16:28 -      95 -   64.91 sent/s -  1538.06 words/s - AE-en:  0.9375 || AE-zh:  1.1290 || BT-en-zh-en:  1.6501 || BT-zh-en-zh:  2.2373 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:06 - 0:16:28 -      95 -   61.80 sent/s -  1540.51 words/s - AE-en:  0.9373 || AE-zh:  1.0727 || BT-en-zh-en:  1.6167 || BT-zh-en-zh:  2.0960 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:06 - 0:16:28 -      95 -   52.93 sent/s -  1551.61 words/s - AE-en:  1.0135 || AE-zh:  1.1054 || BT-en-zh-en:  1.6177 || BT-zh-en-zh:  2.0315 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:34 - 0:16:55 -     100 -   45.21 sent/s -  1426.91 words/s - AE-en:  1.0259 || AE-zh:  1.1123 || BT-en-zh-en:  1.7747 || BT-zh-en-zh:  2.1605 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:34 - 0:16:55 -     100 -   52.60 sent/s -  1419.12 words/s - AE-en:  0.9637 || AE-zh:  1.0779 || BT-en-zh-en:  1.5633 || BT-zh-en-zh:  2.2120 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:34 - 0:16:55 -     100 -   49.36 sent/s -  1419.72 words/s - AE-en:  0.9797 || AE-zh:  1.0950 || BT-en-zh-en:  1.6962 || BT-zh-en-zh:  2.1557 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:34 - 0:16:55 -     100 -   63.52 sent/s -  1401.80 words/s - AE-en:  0.9747 || AE-zh:  1.1401 || BT-en-zh-en:  1.5516 || BT-zh-en-zh:  2.0730 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:58 - 0:17:20 -     105 -   65.29 sent/s -  1556.61 words/s - AE-en:  0.9652 || AE-zh:  1.0669 || BT-en-zh-en:  1.5667 || BT-zh-en-zh:  2.0202 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:58 - 0:17:20 -     105 -   47.76 sent/s -  1571.79 words/s - AE-en:  0.9562 || AE-zh:  1.0968 || BT-en-zh-en:  1.6204 || BT-zh-en-zh:  2.1604 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:58 - 0:17:20 -     105 -   50.96 sent/s -  1567.22 words/s - AE-en:  0.9690 || AE-zh:  1.0593 || BT-en-zh-en:  1.5715 || BT-zh-en-zh:  2.1617 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:53:58 - 0:17:20 -     105 -   73.40 sent/s -  1543.24 words/s - AE-en:  0.9290 || AE-zh:  1.0802 || BT-en-zh-en:  1.6109 || BT-zh-en-zh:  2.0832 -  - model LR: 1.0000e-04
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 16384.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 16384.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 16384.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 16384.0
+INFO - 08/26/21 18:54:23 - 0:17:45 -     110 -   61.76 sent/s -  1552.01 words/s - AE-en:  0.9170 || AE-zh:  1.1374 || BT-en-zh-en:  1.5797 || BT-zh-en-zh:  2.0582 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:23 - 0:17:45 -     110 -   49.45 sent/s -  1558.00 words/s - AE-en:  1.0375 || AE-zh:  1.1226 || BT-en-zh-en:  1.6979 || BT-zh-en-zh:  2.0958 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:23 - 0:17:45 -     110 -   67.03 sent/s -  1544.13 words/s - AE-en:  0.9519 || AE-zh:  1.0959 || BT-en-zh-en:  1.5031 || BT-zh-en-zh:  2.0896 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:23 - 0:17:45 -     110 -   80.24 sent/s -  1534.05 words/s - AE-en:  0.9739 || AE-zh:  1.1215 || BT-en-zh-en:  1.4526 || BT-zh-en-zh:  2.1808 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:51 - 0:18:13 -     115 -   51.07 sent/s -  1403.45 words/s - AE-en:  0.9600 || AE-zh:  1.1019 || BT-en-zh-en:  1.6420 || BT-zh-en-zh:  2.1836 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:51 - 0:18:13 -     115 -   68.62 sent/s -  1387.38 words/s - AE-en:  0.9730 || AE-zh:  1.0945 || BT-en-zh-en:  1.5747 || BT-zh-en-zh:  2.1809 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:51 - 0:18:13 -     115 -   45.05 sent/s -  1409.97 words/s - AE-en:  0.9406 || AE-zh:  1.1003 || BT-en-zh-en:  1.7223 || BT-zh-en-zh:  2.3063 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:54:51 - 0:18:13 -     115 -   56.00 sent/s -  1399.65 words/s - AE-en:  1.0235 || AE-zh:  1.1196 || BT-en-zh-en:  1.6055 || BT-zh-en-zh:  2.2705 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:18 - 0:18:40 -     120 -   45.34 sent/s -  1425.26 words/s - AE-en:  0.9559 || AE-zh:  1.1063 || BT-en-zh-en:  1.6030 || BT-zh-en-zh:  2.2549 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:18 - 0:18:40 -     120 -   59.17 sent/s -  1405.38 words/s - AE-en:  0.9881 || AE-zh:  1.0918 || BT-en-zh-en:  1.5568 || BT-zh-en-zh:  2.1978 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:18 - 0:18:40 -     120 -   47.23 sent/s -  1411.98 words/s - AE-en:  1.0069 || AE-zh:  1.0970 || BT-en-zh-en:  1.6648 || BT-zh-en-zh:  2.2758 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:18 - 0:18:40 -     120 -   58.71 sent/s -  1405.27 words/s - AE-en:  0.9614 || AE-zh:  1.1200 || BT-en-zh-en:  1.6073 || BT-zh-en-zh:  1.9493 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:46 - 0:19:08 -     125 -   43.12 sent/s -  1390.93 words/s - AE-en:  0.9193 || AE-zh:  1.1299 || BT-en-zh-en:  1.5983 || BT-zh-en-zh:  2.2319 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:46 - 0:19:08 -     125 -   60.73 sent/s -  1372.98 words/s - AE-en:  0.9788 || AE-zh:  1.0703 || BT-en-zh-en:  1.5070 || BT-zh-en-zh:  2.1922 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:46 - 0:19:08 -     125 -   50.03 sent/s -  1384.12 words/s - AE-en:  0.9232 || AE-zh:  1.0858 || BT-en-zh-en:  1.5392 || BT-zh-en-zh:  2.3414 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:55:46 - 0:19:08 -     125 -   43.85 sent/s -  1392.85 words/s - AE-en:  1.0127 || AE-zh:  1.0545 || BT-en-zh-en:  1.5767 || BT-zh-en-zh:  2.2432 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:10 - 0:19:32 -     130 -   72.84 sent/s -  1577.85 words/s - AE-en:  0.9977 || AE-zh:  1.0652 || BT-en-zh-en:  1.4665 || BT-zh-en-zh:  2.0163 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:10 - 0:19:32 -     130 -   52.35 sent/s -  1593.39 words/s - AE-en:  0.9565 || AE-zh:  1.0402 || BT-en-zh-en:  1.6052 || BT-zh-en-zh:  2.1245 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:10 - 0:19:32 -     130 -   74.55 sent/s -  1579.38 words/s - AE-en:  0.9519 || AE-zh:  1.0596 || BT-en-zh-en:  1.6598 || BT-zh-en-zh:  2.0460 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:10 - 0:19:32 -     130 -   48.06 sent/s -  1601.76 words/s - AE-en:  0.9934 || AE-zh:  1.0433 || BT-en-zh-en:  1.6380 || BT-zh-en-zh:  2.1537 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:36 - 0:19:57 -     135 -   60.08 sent/s -  1511.05 words/s - AE-en:  0.9718 || AE-zh:  1.1214 || BT-en-zh-en:  1.5665 || BT-zh-en-zh:  2.0699 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:36 - 0:19:57 -     135 -   63.04 sent/s -  1500.13 words/s - AE-en:  1.0249 || AE-zh:  1.1248 || BT-en-zh-en:  1.6316 || BT-zh-en-zh:  2.0803 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:36 - 0:19:57 -     135 -   62.60 sent/s -  1501.06 words/s - AE-en:  0.9864 || AE-zh:  1.1017 || BT-en-zh-en:  1.6923 || BT-zh-en-zh:  2.1847 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:56:36 - 0:19:57 -     135 -   43.99 sent/s -  1520.17 words/s - AE-en:  0.9945 || AE-zh:  1.0626 || BT-en-zh-en:  1.6263 || BT-zh-en-zh:  2.1612 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:02 - 0:20:24 -     140 -   58.38 sent/s -  1454.05 words/s - AE-en:  0.9451 || AE-zh:  1.1096 || BT-en-zh-en:  1.5060 || BT-zh-en-zh:  2.1692 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:02 - 0:20:24 -     140 -   46.53 sent/s -  1469.86 words/s - AE-en:  0.9212 || AE-zh:  1.1466 || BT-en-zh-en:  1.6427 || BT-zh-en-zh:  2.1013 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:02 - 0:20:24 -     140 -   56.07 sent/s -  1458.68 words/s - AE-en:  0.9837 || AE-zh:  1.0488 || BT-en-zh-en:  1.5711 || BT-zh-en-zh:  2.2773 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:02 - 0:20:24 -     140 -   53.58 sent/s -  1458.92 words/s - AE-en:  0.9749 || AE-zh:  1.0736 || BT-en-zh-en:  1.4782 || BT-zh-en-zh:  2.1087 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:30 - 0:20:52 -     145 -   47.51 sent/s -  1380.79 words/s - AE-en:  0.9721 || AE-zh:  1.1390 || BT-en-zh-en:  1.5920 || BT-zh-en-zh:  2.0434 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:30 - 0:20:52 -     145 -   49.55 sent/s -  1377.81 words/s - AE-en:  0.9304 || AE-zh:  1.0421 || BT-en-zh-en:  1.5336 || BT-zh-en-zh:  2.1503 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:30 - 0:20:52 -     145 -   56.17 sent/s -  1375.06 words/s - AE-en:  0.9910 || AE-zh:  1.1278 || BT-en-zh-en:  1.6180 || BT-zh-en-zh:  2.3939 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:30 - 0:20:52 -     145 -   45.21 sent/s -  1382.74 words/s - AE-en:  1.0044 || AE-zh:  1.1059 || BT-en-zh-en:  1.5494 || BT-zh-en-zh:  2.1329 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:54 - 0:21:16 -     150 -   46.73 sent/s -  1589.17 words/s - AE-en:  0.9334 || AE-zh:  1.1001 || BT-en-zh-en:  1.6631 || BT-zh-en-zh:  2.0986 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:54 - 0:21:16 -     150 -   65.80 sent/s -  1573.64 words/s - AE-en:  0.9470 || AE-zh:  1.0697 || BT-en-zh-en:  1.6800 || BT-zh-en-zh:  1.9589 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:54 - 0:21:16 -     150 -   51.73 sent/s -  1582.21 words/s - AE-en:  0.9589 || AE-zh:  1.0801 || BT-en-zh-en:  1.5458 || BT-zh-en-zh:  2.2483 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:57:54 - 0:21:16 -     150 -   69.48 sent/s -  1557.86 words/s - AE-en:  0.9312 || AE-zh:  1.0850 || BT-en-zh-en:  1.6145 || BT-zh-en-zh:  2.0058 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:58:20 - 0:21:42 -     155 -   56.55 sent/s -  1492.39 words/s - AE-en:  0.9323 || AE-zh:  1.0226 || BT-en-zh-en:  1.5348 || BT-zh-en-zh:  2.2316 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:58:20 - 0:21:42 -     155 -   48.99 sent/s -  1497.01 words/s - AE-en:  0.9755 || AE-zh:  1.0410 || BT-en-zh-en:  1.5742 || BT-zh-en-zh:  2.1586 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:58:20 - 0:21:42 -     155 -   60.06 sent/s -  1487.05 words/s - AE-en:  0.9310 || AE-zh:  1.0054 || BT-en-zh-en:  1.5635 || BT-zh-en-zh:  2.1173 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:58:20 - 0:21:42 -     155 -   46.59 sent/s -  1505.55 words/s - AE-en:  0.9615 || AE-zh:  1.1090 || BT-en-zh-en:  1.6553 || BT-zh-en-zh:  2.0803 -  - model LR: 1.0000e-04
+INFO - 08/26/21 18:58:35 - 0:21:57 - ============ End of epoch 1 ============
+INFO - 08/26/21 18:58:35 - 0:21:57 - ============ End of epoch 1 ============
+INFO - 08/26/21 18:58:35 - 0:21:57 - ============ End of epoch 1 ============
+INFO - 08/26/21 18:58:35 - 0:21:57 - ============ End of epoch 1 ============
+INFO - 08/26/21 18:59:05 - 0:22:27 - epoch -> 1.000000
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_en-zh_mt_ppl -> 81.713499
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_en-zh_mt_acc -> 35.208625
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_zh-en_mt_ppl -> 75.078442
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_zh-en_mt_acc -> 35.261963
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_en-zh_mt_ppl -> 49.200916
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_en-zh_mt_acc -> 40.104625
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_zh-en_mt_ppl -> 72.301634
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_zh-en_mt_acc -> 34.626979
+INFO - 08/26/21 18:59:05 - 0:22:27 - ============ Starting epoch 2 ... ============
+INFO - 08/26/21 18:59:05 - 0:22:27 - epoch -> 1.000000
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_en-zh_mt_ppl -> 81.713499
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_en-zh_mt_acc -> 35.208625
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_zh-en_mt_ppl -> 75.078442
+INFO - 08/26/21 18:59:05 - 0:22:27 - valid_zh-en_mt_acc -> 35.261963
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_en-zh_mt_ppl -> 49.200916
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_en-zh_mt_acc -> 40.104625
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_zh-en_mt_ppl -> 72.301634
+INFO - 08/26/21 18:59:05 - 0:22:27 - test_zh-en_mt_acc -> 34.626979
+INFO - 08/26/21 18:59:05 - 0:22:27 - ============ Starting epoch 2 ... ============
+INFO - 08/26/21 18:59:06 - 0:22:28 - epoch -> 1.000000
+INFO - 08/26/21 18:59:06 - 0:22:28 - valid_en-zh_mt_ppl -> 81.713499
+INFO - 08/26/21 18:59:06 - 0:22:28 - valid_en-zh_mt_acc -> 35.208625
+INFO - 08/26/21 18:59:06 - 0:22:28 - valid_zh-en_mt_ppl -> 75.078442
+INFO - 08/26/21 18:59:06 - 0:22:28 - valid_zh-en_mt_acc -> 35.261963
+INFO - 08/26/21 18:59:06 - 0:22:28 - test_en-zh_mt_ppl -> 49.200916
+INFO - 08/26/21 18:59:06 - 0:22:28 - test_en-zh_mt_acc -> 40.104625
+INFO - 08/26/21 18:59:06 - 0:22:28 - test_zh-en_mt_ppl -> 72.301634
+INFO - 08/26/21 18:59:06 - 0:22:28 - test_zh-en_mt_acc -> 34.626979
+INFO - 08/26/21 18:59:06 - 0:22:28 - ============ Starting epoch 2 ... ============
+INFO - 08/26/21 18:59:36 - 0:22:58 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp1.en-zh.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.valid.txt : 5.930000
+INFO - 08/26/21 19:00:39 - 0:24:01 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp1.zh-en.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.valid.txt : 6.270000
+INFO - 08/26/21 19:02:02 - 0:25:24 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp1.en-zh.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.test.txt : 7.660000
+INFO - 08/26/21 19:03:18 - 0:26:40 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp1.zh-en.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.test.txt : 5.570000
+INFO - 08/26/21 19:03:18 - 0:26:40 - epoch -> 1.000000
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_en-zh_mt_ppl -> 81.713499
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_en-zh_mt_acc -> 35.208625
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_en-zh_mt_bleu -> 5.930000
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_zh-en_mt_ppl -> 75.078442
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_zh-en_mt_acc -> 35.261963
+INFO - 08/26/21 19:03:18 - 0:26:40 - valid_zh-en_mt_bleu -> 6.270000
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_en-zh_mt_ppl -> 49.200916
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_en-zh_mt_acc -> 40.104625
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_en-zh_mt_bleu -> 7.660000
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_zh-en_mt_ppl -> 72.301634
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_zh-en_mt_acc -> 34.626979
+INFO - 08/26/21 19:03:18 - 0:26:40 - test_zh-en_mt_bleu -> 5.570000
+INFO - 08/26/21 19:03:18 - 0:26:40 - __log__:{"epoch": 1, "valid_en-zh_mt_ppl": 81.71349924133727, "valid_en-zh_mt_acc": 35.208624748387976, "valid_en-zh_mt_bleu": 5.93, "valid_zh-en_mt_ppl": 75.07844172209926, "valid_zh-en_mt_acc": 35.26196256558853, "valid_zh-en_mt_bleu": 6.27, "test_en-zh_mt_ppl": 49.200915516220455, "test_en-zh_mt_acc": 40.10462464789782, "test_en-zh_mt_bleu": 7.66, "test_zh-en_mt_ppl": 72.30163371915908, "test_zh-en_mt_acc": 34.62697901325479, "test_zh-en_mt_bleu": 5.57}
+INFO - 08/26/21 19:03:18 - 0:26:40 - Saving periodic-1 to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/periodic-1.pth ...
+WARNING - 08/26/21 19:03:18 - 0:26:40 - Saving encoder parameters ...
+WARNING - 08/26/21 19:03:18 - 0:26:40 - Saving decoder parameters ...
+INFO - 08/26/21 19:03:21 - 0:26:43 - Not a better validation score (0 / 10).
+INFO - 08/26/21 19:03:21 - 0:26:43 - Saving checkpoint to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/checkpoint.pth ...
+WARNING - 08/26/21 19:03:21 - 0:26:43 - Saving encoder parameters ...
+WARNING - 08/26/21 19:03:21 - 0:26:43 - Saving decoder parameters ...
+WARNING - 08/26/21 19:03:21 - 0:26:43 - Saving model optimizer ...
+INFO - 08/26/21 19:03:56 - 0:27:18 - ============ Starting epoch 2 ... ============
+INFO - 08/26/21 19:04:12 - 0:27:34 -     160 -    3.77 sent/s -   109.86 words/s - AE-en:  1.0293 || AE-zh:  1.0817 || BT-en-zh-en:  1.6417 || BT-zh-en-zh:  2.1546 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:12 - 0:27:34 -     160 -    3.82 sent/s -   109.57 words/s - AE-en:  0.9180 || AE-zh:  1.0516 || BT-en-zh-en:  1.4801 || BT-zh-en-zh:  2.2353 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:12 - 0:27:34 -     160 -    4.21 sent/s -   109.55 words/s - AE-en:  0.9507 || AE-zh:  1.1210 || BT-en-zh-en:  1.5619 || BT-zh-en-zh:  2.0987 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:12 - 0:27:34 -     160 -    4.21 sent/s -   109.74 words/s - AE-en:  0.9945 || AE-zh:  1.0679 || BT-en-zh-en:  1.5761 || BT-zh-en-zh:  2.1856 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:37 - 0:27:59 -     165 -   40.45 sent/s -  1541.42 words/s - AE-en:  0.9965 || AE-zh:  1.1142 || BT-en-zh-en:  1.6293 || BT-zh-en-zh:  2.2616 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:37 - 0:27:59 -     165 -   51.69 sent/s -  1531.09 words/s - AE-en:  0.9927 || AE-zh:  1.0810 || BT-en-zh-en:  1.5296 || BT-zh-en-zh:  2.2124 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:37 - 0:27:59 -     165 -   58.75 sent/s -  1522.73 words/s - AE-en:  1.0043 || AE-zh:  1.0653 || BT-en-zh-en:  1.6273 || BT-zh-en-zh:  2.0451 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:04:37 - 0:27:59 -     165 -   52.41 sent/s -  1532.77 words/s - AE-en:  0.8782 || AE-zh:  1.0603 || BT-en-zh-en:  1.5635 || BT-zh-en-zh:  2.1410 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:05 - 0:28:27 -     170 -   54.80 sent/s -  1357.73 words/s - AE-en:  0.9638 || AE-zh:  1.0806 || BT-en-zh-en:  1.6140 || BT-zh-en-zh:  2.1571 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:05 - 0:28:27 -     170 -   49.44 sent/s -  1366.60 words/s - AE-en:  0.9646 || AE-zh:  1.0769 || BT-en-zh-en:  1.5798 || BT-zh-en-zh:  2.1810 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:05 - 0:28:27 -     170 -   56.06 sent/s -  1356.77 words/s - AE-en:  0.9476 || AE-zh:  1.1257 || BT-en-zh-en:  1.6020 || BT-zh-en-zh:  2.1562 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:05 - 0:28:27 -     170 -   48.93 sent/s -  1363.36 words/s - AE-en:  0.9374 || AE-zh:  1.0434 || BT-en-zh-en:  1.5823 || BT-zh-en-zh:  2.2831 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:32 - 0:28:54 -     175 -   49.73 sent/s -  1434.86 words/s - AE-en:  0.9509 || AE-zh:  1.0771 || BT-en-zh-en:  1.5015 || BT-zh-en-zh:  2.2862 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:32 - 0:28:54 -     175 -   55.54 sent/s -  1434.86 words/s - AE-en:  0.8807 || AE-zh:  1.0900 || BT-en-zh-en:  1.5293 || BT-zh-en-zh:  2.0869 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:32 - 0:28:54 -     175 -   51.29 sent/s -  1438.20 words/s - AE-en:  0.9873 || AE-zh:  1.1263 || BT-en-zh-en:  1.5327 || BT-zh-en-zh:  2.0339 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:32 - 0:28:54 -     175 -   47.50 sent/s -  1442.65 words/s - AE-en:  0.9364 || AE-zh:  1.0988 || BT-en-zh-en:  1.5763 || BT-zh-en-zh:  2.2722 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:59 - 0:29:21 -     180 -   58.39 sent/s -  1440.37 words/s - AE-en:  0.9226 || AE-zh:  1.1004 || BT-en-zh-en:  1.5536 || BT-zh-en-zh:  2.0023 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:59 - 0:29:21 -     180 -   54.82 sent/s -  1442.91 words/s - AE-en:  0.9845 || AE-zh:  1.0830 || BT-en-zh-en:  1.5432 || BT-zh-en-zh:  1.9532 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:59 - 0:29:21 -     180 -   51.96 sent/s -  1447.05 words/s - AE-en:  0.9359 || AE-zh:  1.0538 || BT-en-zh-en:  1.4787 || BT-zh-en-zh:  2.0441 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:05:59 - 0:29:21 -     180 -   50.07 sent/s -  1452.23 words/s - AE-en:  1.0235 || AE-zh:  1.0747 || BT-en-zh-en:  1.5653 || BT-zh-en-zh:  2.2624 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:24 - 0:29:46 -     185 -   52.30 sent/s -  1523.10 words/s - AE-en:  0.9613 || AE-zh:  1.1179 || BT-en-zh-en:  1.5918 || BT-zh-en-zh:  2.0939 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:24 - 0:29:46 -     185 -   50.12 sent/s -  1526.65 words/s - AE-en:  0.9386 || AE-zh:  1.1360 || BT-en-zh-en:  1.5745 || BT-zh-en-zh:  2.1074 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:24 - 0:29:46 -     185 -   47.37 sent/s -  1531.34 words/s - AE-en:  0.9709 || AE-zh:  1.0812 || BT-en-zh-en:  1.5717 || BT-zh-en-zh:  2.0510 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:24 - 0:29:46 -     185 -   56.80 sent/s -  1516.74 words/s - AE-en:  0.9720 || AE-zh:  1.0664 || BT-en-zh-en:  1.5025 || BT-zh-en-zh:  2.0970 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:51 - 0:30:13 -     190 -   60.77 sent/s -  1437.64 words/s - AE-en:  0.9338 || AE-zh:  0.9954 || BT-en-zh-en:  1.6168 || BT-zh-en-zh:  2.0707 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:51 - 0:30:13 -     190 -   60.89 sent/s -  1441.40 words/s - AE-en:  0.9318 || AE-zh:  1.0854 || BT-en-zh-en:  1.5586 || BT-zh-en-zh:  2.2775 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:51 - 0:30:13 -     190 -   62.43 sent/s -  1437.02 words/s - AE-en:  0.9819 || AE-zh:  1.0826 || BT-en-zh-en:  1.5661 || BT-zh-en-zh:  1.9610 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:06:51 - 0:30:13 -     190 -   45.10 sent/s -  1454.22 words/s - AE-en:  0.9486 || AE-zh:  1.1196 || BT-en-zh-en:  1.4963 || BT-zh-en-zh:  2.0391 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:16 - 0:30:37 -     195 -   52.85 sent/s -  1570.97 words/s - AE-en:  0.9906 || AE-zh:  1.1141 || BT-en-zh-en:  1.6522 || BT-zh-en-zh:  2.0339 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:16 - 0:30:37 -     195 -   61.50 sent/s -  1565.39 words/s - AE-en:  0.9343 || AE-zh:  1.0628 || BT-en-zh-en:  1.6017 || BT-zh-en-zh:  2.0352 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:16 - 0:30:37 -     195 -   59.92 sent/s -  1561.18 words/s - AE-en:  0.9759 || AE-zh:  1.0433 || BT-en-zh-en:  1.5305 || BT-zh-en-zh:  2.1369 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:16 - 0:30:38 -     195 -   74.44 sent/s -  1547.99 words/s - AE-en:  0.9552 || AE-zh:  1.0940 || BT-en-zh-en:  1.5309 || BT-zh-en-zh:  1.9159 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:40 - 0:31:02 -     200 -   48.49 sent/s -  1581.82 words/s - AE-en:  0.9229 || AE-zh:  1.0756 || BT-en-zh-en:  1.5790 || BT-zh-en-zh:  2.1129 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:40 - 0:31:02 -     200 -   67.21 sent/s -  1561.93 words/s - AE-en:  0.9788 || AE-zh:  1.0944 || BT-en-zh-en:  1.5756 || BT-zh-en-zh:  2.1579 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:40 - 0:31:02 -     200 -   64.40 sent/s -  1559.89 words/s - AE-en:  0.9821 || AE-zh:  1.0384 || BT-en-zh-en:  1.5190 || BT-zh-en-zh:  2.1953 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:07:40 - 0:31:02 -     200 -   57.83 sent/s -  1570.27 words/s - AE-en:  0.8947 || AE-zh:  1.0557 || BT-en-zh-en:  1.6416 || BT-zh-en-zh:  2.0225 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:07 - 0:31:29 -     205 -   50.85 sent/s -  1447.46 words/s - AE-en:  0.9517 || AE-zh:  1.0906 || BT-en-zh-en:  1.5375 || BT-zh-en-zh:  2.1668 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:07 - 0:31:29 -     205 -   56.32 sent/s -  1444.86 words/s - AE-en:  0.9935 || AE-zh:  1.0955 || BT-en-zh-en:  1.5075 || BT-zh-en-zh:  2.2531 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:07 - 0:31:29 -     205 -   58.73 sent/s -  1441.04 words/s - AE-en:  0.9339 || AE-zh:  1.1228 || BT-en-zh-en:  1.5959 || BT-zh-en-zh:  2.0197 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:07 - 0:31:29 -     205 -   56.96 sent/s -  1443.02 words/s - AE-en:  0.9527 || AE-zh:  1.0638 || BT-en-zh-en:  1.5871 || BT-zh-en-zh:  2.0873 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:32 - 0:31:54 -     210 -   60.35 sent/s -  1546.23 words/s - AE-en:  0.9018 || AE-zh:  1.0856 || BT-en-zh-en:  1.5416 || BT-zh-en-zh:  2.1025 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:32 - 0:31:54 -     210 -   54.18 sent/s -  1549.11 words/s - AE-en:  0.9594 || AE-zh:  1.1187 || BT-en-zh-en:  1.5770 || BT-zh-en-zh:  2.1078 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:32 - 0:31:54 -     210 -   58.71 sent/s -  1543.34 words/s - AE-en:  0.9579 || AE-zh:  1.0705 || BT-en-zh-en:  1.5080 || BT-zh-en-zh:  1.9729 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:32 - 0:31:54 -     210 -   49.21 sent/s -  1550.21 words/s - AE-en:  0.9329 || AE-zh:  1.0924 || BT-en-zh-en:  1.5218 || BT-zh-en-zh:  2.1157 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:58 - 0:32:20 -     215 -   50.01 sent/s -  1501.55 words/s - AE-en:  0.9180 || AE-zh:  1.0785 || BT-en-zh-en:  1.5012 || BT-zh-en-zh:  2.1956 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:58 - 0:32:19 -     215 -   58.26 sent/s -  1492.79 words/s - AE-en:  0.9503 || AE-zh:  1.0496 || BT-en-zh-en:  1.5689 || BT-zh-en-zh:  2.1801 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:58 - 0:32:19 -     215 -   70.62 sent/s -  1479.83 words/s - AE-en:  1.0056 || AE-zh:  1.0989 || BT-en-zh-en:  1.5922 || BT-zh-en-zh:  2.0874 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:08:58 - 0:32:19 -     215 -   61.25 sent/s -  1487.81 words/s - AE-en:  0.9500 || AE-zh:  1.0470 || BT-en-zh-en:  1.5231 || BT-zh-en-zh:  2.1612 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:23 - 0:32:45 -     220 -   58.23 sent/s -  1537.38 words/s - AE-en:  0.9530 || AE-zh:  1.0860 || BT-en-zh-en:  1.7192 || BT-zh-en-zh:  2.0216 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:23 - 0:32:45 -     220 -   64.74 sent/s -  1532.03 words/s - AE-en:  0.9191 || AE-zh:  1.0565 || BT-en-zh-en:  1.6155 || BT-zh-en-zh:  2.1420 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:23 - 0:32:45 -     220 -   55.59 sent/s -  1543.46 words/s - AE-en:  0.9652 || AE-zh:  1.0924 || BT-en-zh-en:  1.6866 || BT-zh-en-zh:  2.2012 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:23 - 0:32:45 -     220 -   52.12 sent/s -  1543.13 words/s - AE-en:  0.9543 || AE-zh:  1.1035 || BT-en-zh-en:  1.6303 || BT-zh-en-zh:  2.0893 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:48 - 0:33:10 -     225 -   52.18 sent/s -  1495.06 words/s - AE-en:  0.9784 || AE-zh:  1.0477 || BT-en-zh-en:  1.4973 || BT-zh-en-zh:  2.3150 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:48 - 0:33:10 -     225 -   51.37 sent/s -  1497.77 words/s - AE-en:  0.9827 || AE-zh:  1.1107 || BT-en-zh-en:  1.5020 || BT-zh-en-zh:  2.2159 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:48 - 0:33:10 -     225 -   53.18 sent/s -  1493.59 words/s - AE-en:  0.9617 || AE-zh:  1.0954 || BT-en-zh-en:  1.5019 || BT-zh-en-zh:  2.0479 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:09:48 - 0:33:10 -     225 -   57.18 sent/s -  1488.54 words/s - AE-en:  0.9710 || AE-zh:  1.0710 || BT-en-zh-en:  1.5472 || BT-zh-en-zh:  2.2535 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:15 - 0:33:37 -     230 -   61.85 sent/s -  1430.32 words/s - AE-en:  0.9651 || AE-zh:  1.0737 || BT-en-zh-en:  1.4920 || BT-zh-en-zh:  2.0087 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:15 - 0:33:37 -     230 -   43.56 sent/s -  1446.55 words/s - AE-en:  0.9902 || AE-zh:  1.0852 || BT-en-zh-en:  1.5318 || BT-zh-en-zh:  2.1288 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:15 - 0:33:37 -     230 -   39.14 sent/s -  1446.13 words/s - AE-en:  0.9434 || AE-zh:  1.0701 || BT-en-zh-en:  1.6105 || BT-zh-en-zh:  2.2452 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:15 - 0:33:37 -     230 -   57.86 sent/s -  1431.91 words/s - AE-en:  1.0064 || AE-zh:  1.0614 || BT-en-zh-en:  1.5644 || BT-zh-en-zh:  2.1252 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:42 - 0:34:04 -     235 -   59.07 sent/s -  1465.55 words/s - AE-en:  1.0044 || AE-zh:  1.1196 || BT-en-zh-en:  1.5736 || BT-zh-en-zh:  2.1523 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:42 - 0:34:04 -     235 -   55.73 sent/s -  1471.60 words/s - AE-en:  0.9695 || AE-zh:  1.1119 || BT-en-zh-en:  1.6246 || BT-zh-en-zh:  2.0766 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:42 - 0:34:04 -     235 -   46.31 sent/s -  1479.56 words/s - AE-en:  0.8964 || AE-zh:  1.1150 || BT-en-zh-en:  1.6650 || BT-zh-en-zh:  2.2313 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:42 - 0:34:04 -     235 -   55.90 sent/s -  1469.30 words/s - AE-en:  0.9706 || AE-zh:  1.0473 || BT-en-zh-en:  1.5503 || BT-zh-en-zh:  2.0649 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:10:52 - 0:34:14 - ============ End of epoch 2 ============
+INFO - 08/26/21 19:10:52 - 0:34:14 - ============ End of epoch 2 ============
+INFO - 08/26/21 19:10:52 - 0:34:14 - ============ End of epoch 2 ============
+INFO - 08/26/21 19:10:52 - 0:34:14 - ============ End of epoch 2 ============
+INFO - 08/26/21 19:11:22 - 0:34:44 - epoch -> 2.000000
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_en-zh_mt_ppl -> 78.042350
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_en-zh_mt_acc -> 35.223977
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_zh-en_mt_ppl -> 73.520510
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_zh-en_mt_acc -> 35.496907
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_en-zh_mt_ppl -> 45.664989
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_en-zh_mt_acc -> 40.384816
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_zh-en_mt_ppl -> 71.542450
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_zh-en_mt_acc -> 34.765050
+INFO - 08/26/21 19:11:22 - 0:34:44 - ============ Starting epoch 3 ... ============
+INFO - 08/26/21 19:11:22 - 0:34:44 - epoch -> 2.000000
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_en-zh_mt_ppl -> 78.042350
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_en-zh_mt_acc -> 35.223977
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_zh-en_mt_ppl -> 73.520510
+INFO - 08/26/21 19:11:22 - 0:34:44 - valid_zh-en_mt_acc -> 35.496907
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_en-zh_mt_ppl -> 45.664989
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_en-zh_mt_acc -> 40.384816
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_zh-en_mt_ppl -> 71.542450
+INFO - 08/26/21 19:11:22 - 0:34:44 - test_zh-en_mt_acc -> 34.765050
+INFO - 08/26/21 19:11:22 - 0:34:44 - ============ Starting epoch 3 ... ============
+INFO - 08/26/21 19:11:23 - 0:34:45 - epoch -> 2.000000
+INFO - 08/26/21 19:11:23 - 0:34:45 - valid_en-zh_mt_ppl -> 78.042350
+INFO - 08/26/21 19:11:23 - 0:34:45 - valid_en-zh_mt_acc -> 35.223977
+INFO - 08/26/21 19:11:23 - 0:34:45 - valid_zh-en_mt_ppl -> 73.520510
+INFO - 08/26/21 19:11:23 - 0:34:45 - valid_zh-en_mt_acc -> 35.496907
+INFO - 08/26/21 19:11:23 - 0:34:45 - test_en-zh_mt_ppl -> 45.664989
+INFO - 08/26/21 19:11:23 - 0:34:45 - test_en-zh_mt_acc -> 40.384816
+INFO - 08/26/21 19:11:23 - 0:34:45 - test_zh-en_mt_ppl -> 71.542450
+INFO - 08/26/21 19:11:23 - 0:34:45 - test_zh-en_mt_acc -> 34.765050
+INFO - 08/26/21 19:11:23 - 0:34:45 - ============ Starting epoch 3 ... ============
+INFO - 08/26/21 19:11:54 - 0:35:16 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp2.en-zh.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.valid.txt : 5.920000
+INFO - 08/26/21 19:12:57 - 0:36:19 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp2.zh-en.valid.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.valid.txt : 6.200000
+INFO - 08/26/21 19:14:18 - 0:37:40 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp2.en-zh.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.en-zh.test.txt : 7.400000
+INFO - 08/26/21 19:15:31 - 0:38:53 - BLEU ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/hyp2.zh-en.test.txt ./dumped_xlm/xlm_en_zh/ii8spnlkm0/hypotheses/ref.zh-en.test.txt : 5.450000
+INFO - 08/26/21 19:15:31 - 0:38:53 - epoch -> 2.000000
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_en-zh_mt_ppl -> 78.042350
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_en-zh_mt_acc -> 35.223977
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_en-zh_mt_bleu -> 5.920000
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_zh-en_mt_ppl -> 73.520510
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_zh-en_mt_acc -> 35.496907
+INFO - 08/26/21 19:15:31 - 0:38:53 - valid_zh-en_mt_bleu -> 6.200000
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_en-zh_mt_ppl -> 45.664989
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_en-zh_mt_acc -> 40.384816
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_en-zh_mt_bleu -> 7.400000
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_zh-en_mt_ppl -> 71.542450
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_zh-en_mt_acc -> 34.765050
+INFO - 08/26/21 19:15:31 - 0:38:53 - test_zh-en_mt_bleu -> 5.450000
+INFO - 08/26/21 19:15:31 - 0:38:53 - __log__:{"epoch": 2, "valid_en-zh_mt_ppl": 78.04235013881339, "valid_en-zh_mt_acc": 35.22397734638873, "valid_en-zh_mt_bleu": 5.92, "valid_zh-en_mt_ppl": 73.52051044294561, "valid_zh-en_mt_acc": 35.49690657060067, "valid_zh-en_mt_bleu": 6.2, "test_en-zh_mt_ppl": 45.66498879309692, "test_en-zh_mt_acc": 40.38481601263842, "test_en-zh_mt_bleu": 7.4, "test_zh-en_mt_ppl": 71.54244982804002, "test_zh-en_mt_acc": 34.76504970544919, "test_zh-en_mt_bleu": 5.45}
+INFO - 08/26/21 19:15:31 - 0:38:53 - Saving periodic-2 to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/periodic-2.pth ...
+WARNING - 08/26/21 19:15:31 - 0:38:53 - Saving encoder parameters ...
+WARNING - 08/26/21 19:15:31 - 0:38:53 - Saving decoder parameters ...
+INFO - 08/26/21 19:15:34 - 0:38:56 - Not a better validation score (1 / 10).
+INFO - 08/26/21 19:15:34 - 0:38:56 - Saving checkpoint to ./dumped_xlm/xlm_en_zh/ii8spnlkm0/checkpoint.pth ...
+WARNING - 08/26/21 19:15:34 - 0:38:56 - Saving encoder parameters ...
+WARNING - 08/26/21 19:15:34 - 0:38:56 - Saving decoder parameters ...
+WARNING - 08/26/21 19:15:34 - 0:38:56 - Saving model optimizer ...
+INFO - 08/26/21 19:16:03 - 0:39:25 - ============ Starting epoch 3 ... ============
+INFO - 08/26/21 19:16:19 - 0:39:41 -     240 -    4.26 sent/s -   113.98 words/s - AE-en:  0.9546 || AE-zh:  1.0878 || BT-en-zh-en:  1.4938 || BT-zh-en-zh:  2.1824 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:19 - 0:39:41 -     240 -    3.83 sent/s -   114.27 words/s - AE-en:  0.9763 || AE-zh:  1.0745 || BT-en-zh-en:  1.5450 || BT-zh-en-zh:  2.1359 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:19 - 0:39:41 -     240 -    4.43 sent/s -   114.22 words/s - AE-en:  0.9398 || AE-zh:  1.0713 || BT-en-zh-en:  1.5678 || BT-zh-en-zh:  2.0643 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:19 - 0:39:41 -     240 -    4.34 sent/s -   114.08 words/s - AE-en:  0.9537 || AE-zh:  1.0570 || BT-en-zh-en:  1.5957 || BT-zh-en-zh:  2.0197 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:47 - 0:40:09 -     245 -   48.34 sent/s -  1400.20 words/s - AE-en:  0.9402 || AE-zh:  1.0638 || BT-en-zh-en:  1.6789 || BT-zh-en-zh:  2.0411 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:47 - 0:40:09 -     245 -   54.47 sent/s -  1396.10 words/s - AE-en:  0.9673 || AE-zh:  1.0620 || BT-en-zh-en:  1.5215 || BT-zh-en-zh:  1.9939 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:47 - 0:40:09 -     245 -   46.38 sent/s -  1406.63 words/s - AE-en:  0.9360 || AE-zh:  1.0258 || BT-en-zh-en:  1.5303 || BT-zh-en-zh:  2.1961 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:16:47 - 0:40:09 -     245 -   44.76 sent/s -  1404.17 words/s - AE-en:  0.9371 || AE-zh:  1.0458 || BT-en-zh-en:  1.5741 || BT-zh-en-zh:  2.1452 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:14 - 0:40:36 -     250 -   51.36 sent/s -  1446.36 words/s - AE-en:  0.9663 || AE-zh:  1.0737 || BT-en-zh-en:  1.5641 || BT-zh-en-zh:  2.1355 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:14 - 0:40:36 -     250 -   76.54 sent/s -  1421.40 words/s - AE-en:  1.0130 || AE-zh:  1.0963 || BT-en-zh-en:  1.5470 || BT-zh-en-zh:  2.2715 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:14 - 0:40:36 -     250 -   45.43 sent/s -  1452.76 words/s - AE-en:  0.9877 || AE-zh:  1.1472 || BT-en-zh-en:  1.5594 || BT-zh-en-zh:  1.9803 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:14 - 0:40:36 -     250 -   64.72 sent/s -  1435.32 words/s - AE-en:  1.0087 || AE-zh:  1.0883 || BT-en-zh-en:  1.6668 || BT-zh-en-zh:  1.8829 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:39 - 0:41:01 -     255 -   59.04 sent/s -  1518.37 words/s - AE-en:  0.9401 || AE-zh:  1.1028 || BT-en-zh-en:  1.5750 || BT-zh-en-zh:  2.0882 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:39 - 0:41:01 -     255 -   59.59 sent/s -  1518.40 words/s - AE-en:  0.9442 || AE-zh:  1.0873 || BT-en-zh-en:  1.5964 || BT-zh-en-zh:  2.0787 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:39 - 0:41:01 -     255 -   49.45 sent/s -  1529.73 words/s - AE-en:  0.9965 || AE-zh:  1.0562 || BT-en-zh-en:  1.5819 || BT-zh-en-zh:  2.2618 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:17:39 - 0:41:01 -     255 -   53.96 sent/s -  1522.18 words/s - AE-en:  0.9332 || AE-zh:  1.0901 || BT-en-zh-en:  1.6382 || BT-zh-en-zh:  2.1678 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:18:06 - 0:41:28 -     260 -   58.14 sent/s -  1410.16 words/s - AE-en:  0.9449 || AE-zh:  1.0796 || BT-en-zh-en:  1.6318 || BT-zh-en-zh:  2.2530 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:18:06 - 0:41:28 -     260 -   43.78 sent/s -  1419.40 words/s - AE-en:  0.9515 || AE-zh:  1.0451 || BT-en-zh-en:  1.5920 || BT-zh-en-zh:  2.3156 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:18:06 - 0:41:28 -     260 -   52.92 sent/s -  1411.76 words/s - AE-en:  0.9411 || AE-zh:  1.0696 || BT-en-zh-en:  1.6131 || BT-zh-en-zh:  2.1259 -  - model LR: 1.0000e-04
+INFO - 08/26/21 19:18:06 - 0:41:28 -     260 -   52.91 sent/s -  1410.36 words/s - AE-en:  0.9373 || AE-zh:  1.1318 || BT-en-zh-en:  1.5618 || BT-zh-en-zh:  2.0992 -  - model LR: 1.0000e-04
+Traceback (most recent call last):
+  File "/home/lsj/anaconda3/envs/unsupervised_translation/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/lsj/anaconda3/envs/unsupervised_translation/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/lsj/anaconda3/envs/unsupervised_translation/lib/python3.6/site-packages/torch/distributed/launch.py", line 253, in <module>
+    main()
+  File "/home/lsj/anaconda3/envs/unsupervised_translation/lib/python3.6/site-packages/torch/distributed/launch.py", line 249, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/lsj/anaconda3/envs/unsupervised_translation/bin/python', '-u', 'train.py', '--local_rank=3', '--exp_name', 'xlm_en_zh', '--dump_path', './dumped_xlm', '--data_path', './data/processed/en-zh', '--lgs', 'en-zh', '--ae_steps', 'en,zh', '--word_shuffle', '3', '--word_dropout', '0.1', '--lambda_ae', '0:1,100000:0.1,300000:0', '--word_blank', '0.1', '--bt_steps', 'en-zh-en,zh-en-zh', '--encoder_only', 'False', '--emb_dim', '1024', '--n_layers', '6', '--n_heads', '8', '--dropout', '0.1', '--attention_dropout', '0.1', '--gelu_activation', 'True', '--tokens_per_batch', '2000', '--batch_size', '32', '--bptt', '64', '--optimizer', 'adam,lr=0.0001', '--epoch_size', '10000', '--max_epoch', '20', '--validation_metrics', 'valid_en-zh_mt_bleu', '--stopping_criterion', 'valid_en-zh_mt_bleu,10', '--save_periodic', '1', '--reload_model', '/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth,/data/lsj/Encode-XLM/dumped_xlm/xlm_en_zh/rkv7qon2vw/periodic-19.pth', '--eval_bleu', 'True', '--ulr_words_num', '100000', '--fp16', 'True', '--amp', '1']' died with <Signals.SIGKILL: 9>.
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
